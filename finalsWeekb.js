@@ -52,7 +52,7 @@ function scheduleB() {
         } else if (timex >= 9.40 && timex < 11.10) {
             period = "Class 2"
             bmessage = "Class 2 TESTING -  9:40 to 11:10"
-            var timel = "9:40:00";
+            var timel = "11:10:00";
             classis = false;
         } else if (timex >= 11.10 && timex <= 24.59) {
             period = "School Day Ended"

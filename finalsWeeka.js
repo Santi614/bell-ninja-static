@@ -32,7 +32,7 @@ function scheduleA() {
 
     ///// Summer School Schedule
     if (n == 2020) {
-        dayweek = "FINALS TESTING WEEK (Good luck!)"
+        dayweek = "Summer School Schedule 2021"
         //var timex = new Date().getHours();
         if (timex >= 1.00 && timex < 8.00) {
             period = "Early Bird"

@@ -436,7 +436,7 @@ function getsch() {
             period = "Period 8"
             var timel = "15:10:00";
             classis = true;
-        } else if (timex >= 15.10 && timex <0 17.00) {
+        } else if (timex >= 15.10 && timex < 17.00) {
             bmessage = "The library *MAY BE* open until 5:00 PM"
             period = "Have a great rest of your day! Library Closes in..."
             var timel = "17:00:00";

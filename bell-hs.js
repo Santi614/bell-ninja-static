@@ -456,13 +456,13 @@ function getsch() {
 
     ///// Friday
     if (n == 5) {
-        (function titleScroller(text) {
+        /*(function titleScroller(text) {
             document.title = text;
             console.log(text);
             setTimeout(function() {
                 titleScroller(text.substr(1) + text.substr(0, 1));
             }, 2000);
-        }(" Bell Ninja - A Simple Timer: IT'S FRIDAY!!! :D"));
+        }(" Bell Ninja - A Simple Timer: IT'S FRIDAY!!! :D")); */
         dayweek = "Friday :)"
         //var timex = new Date().getHours();
         if (timex >= 1.00 && timex < 8.00) {

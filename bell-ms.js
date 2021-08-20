@@ -1,13 +1,10 @@
-audio = new Audio('./img/guitarbell.mp3');
+function scheduleA() {
+    
+    audio = new Audio('./img/guitarbell.mp3');
 
-var d = new Date();
-var n = d.getDay()
-//var n = 69; (Bulldog breakout schedule)
-//var n = 70; // (Fri Assembly A)
-//var n = 71; // (Coronavirus Remote Teaching Schedule)
-//var n = 42; // (Summer school schedule)
-var n = 2020; // (2020-2021 Weekly Schedule)
-getsch();
+    var d = new Date();
+    var n = d.getDay()
+    getsch();
 
 
 
@@ -40,58 +37,103 @@ function getsch() {
             period = "Good Morning! School Starts in..."
             var timel = "8:00:00";
             classis = false;
-        } else if (timex >= 8.00 && timex <= 8.45) {
+        } else if (timex >= 8.00 && timex <= 8.40) {
             period = "Period 1"
-            bmessage = "Period 1 -  8:00 to 8:45"
+            bmessage = "Period 1 - 8:00 to 8:40"
+            var timel = "8:40:00";
+            classis = true;
+        } else if (timex >= 8.40 && timex < 8.45) {
+            bmessage = "Period 1 & 2 Intermission - 8:40 to 8:45"
+            period = "Class Intermission"
             var timel = "8:45:00";
-            classis = true;
-        } else if (timex >= 8.50 && timex < 9.40) {
-            bmessage = "Period 2 -  8:50 to 9:40"
+            classis = false;
+        } else if (timex >= 8.45 && timex < 9.25) {
             period = "Period 2"
-            var timel = "9:40:00";
+            bmessage = "Period 2 - 8:45 to 9:25"
+            var timel = "9:25:00";
             classis = true;
-        } else if (timex >= 9.40 && timex < 9.55) {
-            bmessage = "Break Time - 9:40 to 9:55"
-            period = "Break Time"
-            var timel = "9:55:00";
+        } else if (timex >= 9.25 && timex <= 9.45) {
+            bmessage = "Break - 9:25 to 9:45"
+            period = "Break Time (15 min.)"
+            var timel = "9:45:00";
             classis = false;
-        } else if (timex >= 9.55 && timex <= 10.40) {
-            bmessage = "Period 3 - 9:55 to 10:40"
+        } else if (timex >= 9.45 && timex <= 10.35) {
             period = "Period 3"
+            bmessage = "Period 3 - 9:45 to 10:35"
+            var timel = "10:35:00";
+            classis = true;
+        } else if (timex >= 10.35 && timex < 10.40) {
+            bmessage = "Period 3 & 4 Intermission - 10:35 to 10:40"
+            period = "Class Intermission"
             var timel = "10:40:00";
-            classis = true;
-        } else if (timex >= 10.45 && timex <= 11.30) {
-            bmessage = "Period 4 - 10:45 to 11:30"
-            period = "Period 4"
-            var timel = "11:30:00";
-            classis = true;
-        } else if (timex >= 11.35 && timex < 12.20) {
-            bmessage = "Period 5 (Middle School Lunch) - 11:35 to 12:20"
-            period = "Period 5"
-            var timel = "12:20:00";
             classis = false;
-        } else if (timex >= 12.20 && timex <= 13.05) {
-            bmessage = "Period 6 (High School Lunch) - 12:20 to 1:05"
-            period = "Period 6"
+        } else if (timex >= 10.40 && timex <= 11.20) {
+            period = "Period 4"
+            bmessage = "Period 4 - 10:40 to 11:20"
+            var timel = "11:20:00";
+            classis = true;
+        } else if (timex >= 11.20 && timex < 11.25) {
+            bmessage = "Period 4 & 5a Intermission - 11:20 to 11:25"
+            period = "Class Intermission"
+            var timel = "11:25:00";
+            classis = false;
+        } else if (timex >= 11.25 && timex < 11.55) {
+            bmessage = "Period 5a (Either Free Period or Lunch) - 11:25 to 11:55"
+            period = "Period 5a"
+            var timel = "11:55:00";
+            classis = true;
+        } else if (timex >= 11.55 && timex < 12.00) {
+            bmessage = "Period 5a & 5b Intermission - 11:55 to 12:00"
+            period = "Class Intermission"
+            var timel = "12:00:00";
+            classis = false;
+        } else if (timex >= 12.00 && timex < 12.30) {
+            bmessage = "Period 5b (Either Free Period or Lunch) - 12:00 to 12:30"
+            period = "Period 5b"
+            var timel = "12:30:00";
+            classis = true;
+        } else if (timex >= 12.30 && timex < 12.35) {
+            bmessage = "Period 5b & 6a Intermission - 12:30to 12:35"
+            period = "Class Intermission"
+            var timel = "12:35:00";
+            classis = false;
+        } else if (timex >= 12.35 && timex <= 13.05) {
+            bmessage = "Period 6a (MS Class) - 12:35 to 1:05"
+            period = "Period 6a"
             var timel = "13:05:00";
             classis = false;
-        } else if (timex >= 13.10 && timex <= 13.55) {
-            bmessage = "Period 7 - 1:05 to 1:55"
-            period = "Period 7"
-            var timel = "13:55:00";
-            classis = true;
-        } else if (timex >= 14.00 && timex < 14.50) {
-            bmessage = "Period 8 - 2:00 to 2:50"
-            period = "Period 8"
-            var timel = "14:50:00";
-            classis = true;
-        } else if (timex >= 14.50 && timex < 15.15) {
-            bmessage = "Tutorial Time - 2:50 to 3:15"
-            period = "Tutorial"
-            var timel = "15:15:00";
+        } else if (timex >= 13.05 && timex < 13.10) {
+            bmessage = "Period 6a & 6b Intermission - 1:05 to 1:10"
+            period = "Class Intermission"
+            var timel = "13:10:00";
             classis = false;
-        } else if (timex >= 15.15 && timex <= 17.00) {
-            bmessage = "The library is open until 5:00 PM"
+        } else if (timex >= 13.10 && timex <= 13.40) {
+            bmessage = "Period 6b (MS Free Period) - 1:10 to 1:40"
+            period = "Period 6b"
+            var timel = "13:40:00";
+            classis = false;
+        } else if (timex >= 13.40 && timex < 13.45) {
+            bmessage = "Period 6b & 7 Intermission - 1:40 to 1:45"
+            period = "Class Intermission"
+            var timel = "13:45:00";
+            classis = false;
+        } else if (timex >= 13.45 && timex <= 14.25) {
+            bmessage = "Period 7 - 1:45 to 2:25"
+            period = "Period 7"
+            var timel = "14:25:00";
+            classis = true;
+        } else if (timex >= 14.25 && timex < 14.30) {
+            bmessage = "Period 7 & 8 Intermission - 2:25 to 2:30"
+            period = "Class Intermission"
+            var timel = "14:30:00";
+            classis = false;
+        } else if (timex >= 14.30 && timex < 15.10) {
+            bmessage = "Period 8 - 2:30 to 3:10"
+            period = "Period 8"
+            var timel = "15:10:00";
+            classis = true;
+        } else if (timex >= 15.10 && timex <= 17.00) {
+            bmessage = "The library *MAY BE* open until 5:00 PM"
             period = "Have a great rest of your day! Library Closes in..."
             var timel = "17:00:00";
             classis = false;
@@ -117,43 +159,73 @@ function getsch() {
             period = "Good Morning! School Starts in..."
             var timel = "8:00:00";
             classis = false;
-        } else if (timex >= 8.00 && timex < 9.35) {
-            bmessage = "Period 2 - 8:00 to 9:35"
-            period = "Block 2"
-            var timel = "9:35:00";
+        } else if (timex >= 8.00 && timex <= 9.30) {
+            period = "Period 1"
+            bmessage = "Period 1 - 8:00 to 9:30"
+            var timel = "9:30:00";
             classis = true;
-        } else if (timex >= 9.35 && timex < 9.50) {
-            bmessage = "Break Time - 9:35 to 9:50"
-            period = "Break Time"
-            var timel = "9:50:00";
+        } else if (timex >= 9.30 && timex <= 9.45) {
+            bmessage = "Break - 9:30 to 9:45"
+            period = "Break Time (15 min.)"
+            var timel = "9:45:00";
             classis = false;
-        } else if (timex >= 9.50 && timex <= 11.20) {
-            bmessage = "Period 4 - 9:50 to 11:20"
-            period = "Block 4"
+        } else if (timex >= 9.45 && timex <= 11.15) {
+            period = "Period 3"
+            bmessage = "Period 3 - 9:45 to 11:15"
+            var timel = "11:15:00";
+            classis = true;
+        } else if (timex >= 11.15 && timex < 11.20) {
+            bmessage = "Period 3 & 5a Intermission - 11:15 to 11:20"
+            period = "Class Intermission"
             var timel = "11:20:00";
-            classis = true;
-        } else if (timex >= 11.25 && timex < 12.10) {
-            bmessage = "Period 5 - 11:25 to 12:10"
-            period = "Block 5"
-            var timel = "12:10:00";
             classis = false;
-        } else if (timex >= 12.15 && timex <= 13.00) {
-            bmessage = "Period 6 - 12:15 to 1:00"
-            period = "Block 6"
+        } else if (timex >= 11.20 && timex < 11.50) {
+            bmessage = "Period 5a (Either Free Period or Lunch) - 11:20 to 11:50"
+            period = "Period 5a"
+            var timel = "11:50:00";
+            classis = true;
+        } else if (timex >= 11.50 && timex < 11.55) {
+            bmessage = "Period 5a & 5b Intermission - 11:50 to 11:55"
+            period = "Class Intermission"
+            var timel = "11:55:00";
+            classis = false;
+        } else if (timex >= 11.55 && timex < 12.25) {
+            bmessage = "Period 5b (Either Free Period or Lunch) - 11:55 to 12:25"
+            period = "Period 5b"
+            var timel = "12:25:00";
+            classis = true;
+        } else if (timex >= 12.25 && timex < 12.30) {
+            bmessage = "Period 5b & 6a Intermission - 12:25 to 12:30"
+            period = "Class Intermission"
+            var timel = "12:30:00";
+            classis = false;
+        } else if (timex >= 12.30 && timex <= 13.00) {
+            bmessage = "Period 6a (MS Class) - 12:30 to 1:00"
+            period = "Period 6a"
             var timel = "13:00:00";
             classis = false;
-        } else if (timex >= 13.05 && timex < 14.40) {
-            bmessage = "Period 8 - 1:05 to 2:40"
-            period = "Block 8"
-            var timel = "14:40:00";
-            classis = true;
-        } else if (timex >= 14.40 && timex < 15.15) {
-            bmessage = "Tutorial Time - 2:40 to 3:15"
-            period = "Tutorial Time"
-            var timel = "15:15:00";
+        } else if (timex >= 13.00 && timex < 13.05) {
+            bmessage = "Period 6a & 6b Intermission - 1:00 to 1:05"
+            period = "Class Intermission"
+            var timel = "13:05:00";
             classis = false;
-        } else if (timex >= 15.15 && timex <= 17.00) {
-            bmessage = "The library is open until 5:00 PM"
+        } else if (timex >= 13.05 && timex <= 13.35) {
+            bmessage = "Period 6b (MS Free Time) - 1:05 to 1:35"
+            period = "Period 6b"
+            var timel = "13:35:00";
+            classis = false;
+        } else if (timex >= 13.35 && timex < 13.40) {
+            bmessage = "Period 6b & 7 Intermission - 1:35 to 1:40"
+            period = "Class Intermission"
+            var timel = "13:40:00";
+            classis = false;
+        } else if (timex >= 13.40 && timex <= 15.10) {
+            bmessage = "Period 7 - 1:40 to 3:10"
+            period = "Period 7"
+            var timel = "15:10:00";
+            classis = true;
+        } else if (timex >= 15.10 && timex <= 17.00) {
+            bmessage = "The library *MAY BE* open until 5:00 PM"
             period = "Have a great rest of your day! Library Closes in..."
             var timel = "17:00:00";
             classis = false;
@@ -177,32 +249,73 @@ function getsch() {
             period = "Good Morning! School Starts in..."
             var timel = "8:00:00";
             classis = false;
-        } else if (timex >= 8.00 && timex < 9.35) {
-            period = "Block 1"
-            var timel = "9:35:00";
+        } else if (timex >= 8.00 && timex <= 9.30) {
+            period = "Period 2"
+            bmessage = "Period 2 - 8:00 to 9:30"
+            var timel = "9:30:00";
             classis = true;
-        } else if (timex >= 9.35 && timex < 9.50) {
-            period = "Break Time"
-            var timel = "9:50:00";
+        } else if (timex >= 9.30 && timex <= 9.45) {
+            bmessage = "Break - 9:30 to 9:45"
+            period = "Break Time (15 min.)"
+            var timel = "9:45:00";
             classis = false;
-        } else if (timex >= 9.50 && timex <= 11.20) {
-            period = "Block 3"
+        } else if (timex >= 9.45 && timex <= 11.15) {
+            period = "Period 4"
+            bmessage = "Period 4 - 9:45 to 11:15"
+            var timel = "11:15:00";
+            classis = true;
+        } else if (timex >= 11.15 && timex < 11.20) {
+            bmessage = "Period 4 & 5a Intermission - 11:15 to 11:20"
+            period = "Class Intermission"
             var timel = "11:20:00";
-            classis = true;
-        } else if (timex >= 11.25 && timex < 12.10) {
-            period = "Block 5"
-            var timel = "12:10:00";
             classis = false;
-        } else if (timex >= 12.15 && timex <= 13.00) {
-            period = "Block 6"
+        } else if (timex >= 11.20 && timex < 11.50) {
+            bmessage = "Period 5a (Either Free Period or Lunch) - 11:20 to 11:50"
+            period = "Period 5a"
+            var timel = "11:50:00";
+            classis = true;
+        } else if (timex >= 11.50 && timex < 11.55) {
+            bmessage = "Period 5a & 5b Intermission - 11:50 to 11:55"
+            period = "Class Intermission"
+            var timel = "11:55:00";
+            classis = false;
+        } else if (timex >= 11.55 && timex < 12.25) {
+            bmessage = "Period 5b (Either Free Period or Lunch) - 11:55 to 12:25"
+            period = "Period 5b"
+            var timel = "12:25:00";
+            classis = true;
+        } else if (timex >= 12.25 && timex < 12.30) {
+            bmessage = "Period 5b & 6a Intermission - 12:25 to 12:30"
+            period = "Class Intermission"
+            var timel = "12:30:00";
+            classis = false;
+        } else if (timex >= 12.30 && timex <= 13.00) {
+            bmessage = "Period 6a (MS Class) - 12:30 to 1:00"
+            period = "Period 6a"
             var timel = "13:00:00";
             classis = false;
-        } else if (timex >= 13.00 && timex < 14.35) {
-            period = "Block 7"
-            var timel = "14:35:00";
+        } else if (timex >= 13.00 && timex < 13.05) {
+            bmessage = "Period 6a & 6b Intermission - 1:00 to 1:05"
+            period = "Class Intermission"
+            var timel = "13:05:00";
+            classis = false;
+        } else if (timex >= 13.05 && timex <= 13.35) {
+            bmessage = "Period 6b (MS Free Time) - 1:05 to 1:35"
+            period = "Period 6b"
+            var timel = "13:35:00";
+            classis = false;
+        } else if (timex >= 13.35 && timex < 13.40) {
+            bmessage = "Period 6b & 8 Intermission - 1:35 to 1:40"
+            period = "Class Intermission"
+            var timel = "13:40:00";
+            classis = false;
+        } else if (timex >= 13.40 && timex <= 15.10) {
+            bmessage = "Period 8 - 1:40 to 3:10"
+            period = "Period 7"
+            var timel = "15:10:00";
             classis = true;
-        } else if (timex >= 14.35 && timex <= 17.00) {
-            bmessage = "The library is open until 5:00 PM"
+        } else if (timex >= 15.10 && timex <= 17.00) {
+            bmessage = "The library *MAY BE* open until 5:00 PM"
             period = "Have a great rest of your day! Library Closes in..."
             var timel = "17:00:00";
             classis = false;
@@ -220,66 +333,111 @@ function getsch() {
 
 
 
-    ///// Thursday
+    ///// Thurday
     if (n == 4) {
-        dayweek = "Thursday"
+        dayweek = "Thursday :/"
         //var timex = new Date().getHours();
         if (timex >= 1.00 && timex < 8.00) {
             period = "Good Morning! School Starts in..."
             var timel = "8:00:00";
             classis = false;
-        } else if (timex >= 8.00 && timex <= 8.45) {
+        } else if (timex >= 8.00 && timex <= 8.40) {
             period = "Period 1"
-            bmessage = "Period 1 -  8:00 to 8:45"
+            bmessage = "Period 1 - 8:00 to 8:40"
+            var timel = "8:40:00";
+            classis = true;
+        } else if (timex >= 8.40 && timex < 8.45) {
+            bmessage = "Period 1 & 2 Intermission - 8:40 to 8:45"
+            period = "Class Intermission"
             var timel = "8:45:00";
-            classis = true;
-        } else if (timex >= 8.50 && timex < 9.40) {
-            bmessage = "Period 2 -  8:50 to 9:40"
+            classis = false;
+        } else if (timex >= 8.45 && timex < 9.25) {
             period = "Period 2"
-            var timel = "9:40:00";
+            bmessage = "Period 2 - 8:45 to 9:25"
+            var timel = "9:25:00";
             classis = true;
-        } else if (timex >= 9.40 && timex < 9.55) {
-            bmessage = "Break Time - 9:40 to 9:55"
-            period = "Break Time"
-            var timel = "9:55:00";
+        } else if (timex >= 9.25 && timex <= 9.45) {
+            bmessage = "Break - 9:25 to 9:45"
+            period = "Break Time (15 min.)"
+            var timel = "9:45:00";
             classis = false;
-        } else if (timex >= 9.55 && timex <= 10.40) {
-            bmessage = "Period 3 - 9:55 to 10:40"
+        } else if (timex >= 9.45 && timex <= 10.35) {
             period = "Period 3"
+            bmessage = "Period 3 - 9:45 to 10:35"
+            var timel = "10:35:00";
+            classis = true;
+        } else if (timex >= 10.35 && timex < 10.40) {
+            bmessage = "Period 3 & 4 Intermission - 10:35 to 10:40"
+            period = "Class Intermission"
             var timel = "10:40:00";
-            classis = true;
-        } else if (timex >= 10.45 && timex <= 11.30) {
-            bmessage = "Period 4 - 10:45 to 11:30"
-            period = "Period 4"
-            var timel = "11:30:00";
-            classis = true;
-        } else if (timex >= 11.35 && timex < 12.20) {
-            bmessage = "Period 5 (Middle School Lunch) - 11:35 to 12:20"
-            period = "Period 5"
-            var timel = "12:20:00";
             classis = false;
-        } else if (timex >= 12.20 && timex <= 13.05) {
-            bmessage = "Period 6 (High School Lunch) - 12:20 to 1:05"
-            period = "Period 6"
+        } else if (timex >= 10.40 && timex <= 11.20) {
+            period = "Period 4"
+            bmessage = "Period 4 - 10:40 to 11:20"
+            var timel = "11:20:00";
+            classis = true;
+        } else if (timex >= 11.20 && timex < 11.25) {
+            bmessage = "Period 4 & 5a Intermission - 11:20 to 11:25"
+            period = "Class Intermission"
+            var timel = "11:25:00";
+            classis = false;
+        } else if (timex >= 11.25 && timex < 11.55) {
+            bmessage = "Period 5a (Either Free Period or Lunch) - 11:25 to 11:55"
+            period = "Period 5a"
+            var timel = "11:55:00";
+            classis = true;
+        } else if (timex >= 11.55 && timex < 12.00) {
+            bmessage = "Period 5a & 5b Intermission - 11:55 to 12:00"
+            period = "Class Intermission"
+            var timel = "12:00:00";
+            classis = false;
+        } else if (timex >= 12.00 && timex < 12.30) {
+            bmessage = "Period 5b (Either Free Period or Lunch) - 12:00 to 12:30"
+            period = "Period 5b"
+            var timel = "12:30:00";
+            classis = true;
+        } else if (timex >= 12.30 && timex < 12.35) {
+            bmessage = "Period 5b & 6a Intermission - 12:30to 12:35"
+            period = "Class Intermission"
+            var timel = "12:35:00";
+            classis = false;
+        } else if (timex >= 12.35 && timex <= 13.05) {
+            bmessage = "Period 6a (MS Class) - 12:35 to 1:05"
+            period = "Period 6a"
             var timel = "13:05:00";
             classis = false;
-        } else if (timex >= 13.10 && timex <= 13.55) {
-            bmessage = "Period 7 - 1:05 to 1:55"
-            period = "Period 7"
-            var timel = "13:55:00";
-            classis = true;
-        } else if (timex >= 14.00 && timex < 14.50) {
-            bmessage = "Period 8 - 2:00 to 2:50"
-            period = "Period 8"
-            var timel = "14:50:00";
-            classis = true;
-        } else if (timex >= 14.50 && timex < 15.15) {
-            bmessage = "Tutorial Time - 2:50 to 3:15"
-            period = "Tutorial"
-            var timel = "15:15:00";
+        } else if (timex >= 13.05 && timex < 13.10) {
+            bmessage = "Period 6a & 6b Intermission - 1:05 to 1:10"
+            period = "Class Intermission"
+            var timel = "13:10:00";
             classis = false;
-        } else if (timex >= 15.15 && timex <= 17.00) {
-            bmessage = "The library is open until 5:00 PM"
+        } else if (timex >= 13.10 && timex <= 13.40) {
+            bmessage = "Period 6b (MS Free Period) - 1:10 to 1:40"
+            period = "Period 6b"
+            var timel = "13:40:00";
+            classis = false;
+        } else if (timex >= 13.40 && timex < 13.45) {
+            bmessage = "Period 6b & 7 Intermission - 1:40 to 1:45"
+            period = "Class Intermission"
+            var timel = "13:45:00";
+            classis = false;
+        } else if (timex >= 13.45 && timex <= 14.25) {
+            bmessage = "Period 7 - 1:45 to 2:25"
+            period = "Period 7"
+            var timel = "14:25:00";
+            classis = true;
+        } else if (timex >= 14.25 && timex < 14.30) {
+            bmessage = "Period 7 & 8 Intermission - 2:25 to 2:30"
+            period = "Class Intermission"
+            var timel = "14:30:00";
+            classis = false;
+        } else if (timex >= 14.30 && timex < 15.10) {
+            bmessage = "Period 8 - 2:30 to 3:10"
+            period = "Period 8"
+            var timel = "15:10:00";
+            classis = true;
+        } else if (timex >= 15.10 && timex <= 17.00) {
+            bmessage = "The library *MAY BE* open until 5:00 PM"
             period = "Have a great rest of your day! Library Closes in..."
             var timel = "17:00:00";
             classis = false;
@@ -304,65 +462,110 @@ function getsch() {
             setTimeout(function() {
                 titleScroller(text.substr(1) + text.substr(0, 1));
             }, 2000);
-        }(" Bell Ninja - A CMD Book Creation - IT'S FRIDAY!!! :D"));
-        dayweek = "Friday"
+        }(" Bell Ninja - A Simple Timer: IT'S FRIDAY!!! :D"));
+        dayweek = "Friday :)"
         //var timex = new Date().getHours();
         if (timex >= 1.00 && timex < 8.00) {
             period = "Good Morning! School Starts in..."
             var timel = "8:00:00";
             classis = false;
-        } else if (timex >= 8.00 && timex <= 8.45) {
+        } else if (timex >= 8.00 && timex <= 8.40) {
             period = "Period 1"
-            bmessage = "Period 1 -  8:00 to 8:45"
+            bmessage = "Period 1 - 8:00 to 8:40"
+            var timel = "8:40:00";
+            classis = true;
+        } else if (timex >= 8.40 && timex < 8.45) {
+            bmessage = "Period 1 & 2 Intermission - 8:40 to 8:45"
+            period = "Class Intermission"
             var timel = "8:45:00";
-            classis = true;
-        } else if (timex >= 8.50 && timex < 9.40) {
-            bmessage = "Period 2 -  8:50 to 9:40"
+            classis = false;
+        } else if (timex >= 8.45 && timex < 9.25) {
             period = "Period 2"
-            var timel = "9:40:00";
+            bmessage = "Period 2 - 8:45 to 9:25"
+            var timel = "9:25:00";
             classis = true;
-        } else if (timex >= 9.40 && timex < 9.55) {
-            bmessage = "Break Time - 9:40 to 9:55"
-            period = "Break Time"
-            var timel = "9:55:00";
+        } else if (timex >= 9.25 && timex <= 9.45) {
+            bmessage = "Break - 9:25 to 9:45"
+            period = "Break Time (15 min.)"
+            var timel = "9:45:00";
             classis = false;
-        } else if (timex >= 9.55 && timex <= 10.40) {
-            bmessage = "Period 3 - 9:55 to 10:40"
+        } else if (timex >= 9.45 && timex <= 10.35) {
             period = "Period 3"
+            bmessage = "Period 3 - 9:45 to 10:35"
+            var timel = "10:35:00";
+            classis = true;
+        } else if (timex >= 10.35 && timex < 10.40) {
+            bmessage = "Period 3 & 4 Intermission - 10:35 to 10:40"
+            period = "Class Intermission"
             var timel = "10:40:00";
-            classis = true;
-        } else if (timex >= 10.45 && timex <= 11.30) {
-            bmessage = "Period 4 - 10:45 to 11:30"
-            period = "Period 4"
-            var timel = "11:30:00";
-            classis = true;
-        } else if (timex >= 11.35 && timex < 12.20) {
-            bmessage = "Period 5 (Middle School Lunch) - 11:35 to 12:20"
-            period = "Period 5"
-            var timel = "12:20:00";
             classis = false;
-        } else if (timex >= 12.20 && timex <= 13.05) {
-            bmessage = "Period 6 (High School Lunch) - 12:20 to 1:05"
-            period = "Period 6"
+        } else if (timex >= 10.40 && timex <= 11.20) {
+            period = "Period 4"
+            bmessage = "Period 4 - 10:40 to 11:20"
+            var timel = "11:20:00";
+            classis = true;
+        } else if (timex >= 11.20 && timex < 11.25) {
+            bmessage = "Period 4 & 5a Intermission - 11:20 to 11:25"
+            period = "Class Intermission"
+            var timel = "11:25:00";
+            classis = false;
+        } else if (timex >= 11.25 && timex < 11.55) {
+            bmessage = "Period 5a (Either Free Period or Lunch) - 11:25 to 11:55"
+            period = "Period 5a"
+            var timel = "11:55:00";
+            classis = true;
+        } else if (timex >= 11.55 && timex < 12.00) {
+            bmessage = "Period 5a & 5b Intermission - 11:55 to 12:00"
+            period = "Class Intermission"
+            var timel = "12:00:00";
+            classis = false;
+        } else if (timex >= 12.00 && timex < 12.30) {
+            bmessage = "Period 5b (Either Free Period or Lunch) - 12:00 to 12:30"
+            period = "Period 5b"
+            var timel = "12:30:00";
+            classis = true;
+        } else if (timex >= 12.30 && timex < 12.35) {
+            bmessage = "Period 5b & 6a Intermission - 12:30to 12:35"
+            period = "Class Intermission"
+            var timel = "12:35:00";
+            classis = false;
+        } else if (timex >= 12.35 && timex <= 13.05) {
+            bmessage = "Period 6a (MS Class) - 12:35 to 1:05"
+            period = "Period 6a"
             var timel = "13:05:00";
             classis = false;
-        } else if (timex >= 13.10 && timex <= 13.55) {
-            bmessage = "Period 7 - 1:05 to 1:55"
-            period = "Period 7"
-            var timel = "13:55:00";
-            classis = true;
-        } else if (timex >= 14.00 && timex < 14.50) {
-            bmessage = "Period 8 - 2:00 to 2:50"
-            period = "Period 8"
-            var timel = "14:50:00";
-            classis = true;
-        } else if (timex >= 14.50 && timex < 15.15) {
-            bmessage = "Tutorial Time - 2:50 to 3:15"
-            period = "Tutorial"
-            var timel = "15:15:00";
+        } else if (timex >= 13.05 && timex < 13.10) {
+            bmessage = "Period 6a & 6b Intermission - 1:05 to 1:10"
+            period = "Class Intermission"
+            var timel = "13:10:00";
             classis = false;
-        } else if (timex >= 15.15 && timex <= 17.00) {
-            bmessage = "The library is open until 5:00 PM"
+        } else if (timex >= 13.10 && timex <= 13.40) {
+            bmessage = "Period 6b (MS Free Period) - 1:10 to 1:40"
+            period = "Period 6b"
+            var timel = "13:40:00";
+            classis = false;
+        } else if (timex >= 13.40 && timex < 13.45) {
+            bmessage = "Period 6b & 7 Intermission - 1:40 to 1:45"
+            period = "Class Intermission"
+            var timel = "13:45:00";
+            classis = false;
+        } else if (timex >= 13.45 && timex <= 14.25) {
+            bmessage = "Period 7 - 1:45 to 2:25"
+            period = "Period 7"
+            var timel = "14:25:00";
+            classis = true;
+        } else if (timex >= 14.25 && timex < 14.30) {
+            bmessage = "Period 7 & 8 Intermission - 2:25 to 2:30"
+            period = "Class Intermission"
+            var timel = "14:30:00";
+            classis = false;
+        } else if (timex >= 14.30 && timex < 15.10) {
+            bmessage = "Period 8 - 2:30 to 3:10"
+            period = "Period 8"
+            var timel = "15:10:00";
+            classis = true;
+        } else if (timex >= 15.10 && timex <= 17.00) {
+            bmessage = "The library *MAY BE* open until 5:00 PM"
             period = "Have a great rest of your day! Library Closes in..."
             var timel = "17:00:00";
             classis = false;
@@ -734,14 +937,10 @@ function getsch() {
 
         
 
-    document.getElementById("demo").innerHTML = period;
-    document.getElementById("demo2").innerHTML = timex;
-    document.getElementById("demo3").innerHTML = dayweek;
-    document.getElementById("demo4").innerHTML = bmessage;
-
-    ////////////////
-    //var timel = "15:20:00";
-    ////////////////
+    document.getElementById("demo-b").innerHTML = period;
+    document.getElementById("demo2-b").innerHTML = timex;
+    document.getElementById("demo3-b").innerHTML = dayweek;
+    document.getElementById("demo4-b").innerHTML = bmessage;
 
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
@@ -788,139 +987,6 @@ function getsch() {
         var minute = cminute;
         var timex = chour + "." + cminute;
 
-        //play bell if bell rings
-        /*
-        if (timex == 7.59) {
-            playAudio();
-            playAudio();
-        }
-        if (timex == 8.00) {
-            playAudio();
-        }
-
-
-
-
-        if (timex == 8.40) {
-            playAudio();
-        }
-
-
-
-
-        if (timex == 8.49) {
-            playAudio();
-        }
-        if (timex == 8.50) {
-            playAudio();
-        }
-
-
-
-        //break starts
-        if (timex == 9.30) {
-            playAudio();
-        }
-
-
-        //break ends
-        if (timex == 9.54) {
-            playAudio();
-        }
-        if (timex == 9.55) {
-            playAudio();
-        }
-
-
-
-
-        if (timex == 10.35) {
-            playAudio();
-        }
-
-
-
-    
-        if (timex == 10.44) {
-            playAudio();
-        }
-        if (timex == 10.45) {
-            playAudio();
-        }
-
-
-
-
-        if (timex == 11.25) {
-            playAudio();
-        }
-
-
-
-        if (timex == 11.34) {
-            playAudio();
-        }
-        if (timex == 11.35) {
-            playAudio();
-        }
-
-
-
-
-        if (timex == 12.15) {
-            playAudio();
-        }
-
-
-
-        if (timex == 12.24) {
-            playAudio();
-        }
-        if (timex == 12.25) {
-            playAudio();
-        }
-
-
-
-
-        if (timex == 13.05) {
-            playAudio();
-        }
-
-
-
-        if (timex == 13.14) {
-            playAudio();
-        }
-        if (timex == 13.15) {
-            playAudio();
-        }
-
-
-
-
-        if (timex == 13.55) {
-            playAudio();
-        }
-
-
-
-        if (timex == 14.04) {
-            playAudio();
-        }
-        if (timex == 14.05) {
-            playAudio();
-        }
-
-
-
-        
-        if (timex == 14.45) {
-            playAudio();
-        }
-
-        */
-
 
 
     temphour = hours * 60;
@@ -953,10 +1019,10 @@ function getTimeRemaining(endtime) {
 
 function initializeClock(id, endtime) {
     var clock = document.getElementById(id);
-    var daysSpan = clock.querySelector('.days');
-    var hoursSpan = clock.querySelector('.hours');
-    var minutesSpan = clock.querySelector('.minutes');
-    var secondsSpan = clock.querySelector('.seconds');
+    var daysSpan = clock.querySelector('.daysA');
+    var hoursSpan = clock.querySelector('.hoursA');
+    var minutesSpan = clock.querySelector('.minutesA');
+    var secondsSpan = clock.querySelector('.secondsA');
 
     function updateClock() {
         var t = getTimeRemaining(endtime);
@@ -979,7 +1045,7 @@ function initializeClock(id, endtime) {
 
 // Last number is mili seconds
 deadline = new Date(Date.parse(new Date()) + 1 * 1 * 1 * xsec * 1000);
-initializeClock('clockdiv', deadline);
+initializeClock('clockdiv1', deadline);
 
 function checknull() {
     if (distance == 0) {
@@ -996,11 +1062,11 @@ function checknull() {
 var x = document.getElementById("bell"); 
 
 function playAudio() { 
-  x.play(); 
+x.play(); 
 } 
 
 function pauseAudio() { 
-  x.pause(); 
+x.pause(); 
 } 
 
 timeoutx = finalseconds * 1000;
@@ -1010,44 +1076,54 @@ const start = Date.now();
 console.log('Starting alternate bell countdown for audio');
 
 setTimeout(() => {
-  const millis = Date.now() - start;
+const millis = Date.now() - start;
 
-  console.log(`seconds elapsed = ${Math.floor(millis/1000)}, playing bell`);
-  playAudio();
+console.log(`seconds elapsed = ${Math.floor(millis/1000)}, playing bell`);
+playAudio();
+scheduleA();
 }, timeoutx);
 
+/*
 if (accepted()) {
 
     document.cookie = "audioenabled = True";
 
 }
-
-//break alarm 2
-
-/* if (!isclass) {
-var x = document.getElementById("bell"); 
-
-function playAudio() { 
-  x.play(); 
-} 
-
-function pauseAudio() { 
-  x.pause(); 
-} 
-
-timeoutx = finalseconds * 1000;
-
-const start = Date.now();
-
-console.log('Starting 2nd alternate bell countdown for audio');
-
-setTimeout(() => {
-  const millis = Date.now() - start;
-
-  console.log(`seconds elapsed = ${Math.floor(millis/1000)}, playing bell`);
-  playAudio();
-}, timeoutx);
-}
-
 */
 
+
+
+function exit( status ) {
+
+var i;
+
+if (typeof status === 'string') {
+    console.log(status);
+}
+
+window.addEventListener('error', function (e) {e.preventDefault();e.stopPropagation();}, false);
+
+var handlers = [
+    'copy', 'cut', 'paste',
+    'beforeunload', 'blur', 'change', 'click', 'contextmenu', 'dblclick', 'focus', 'keydown', 'keypress', 'keyup', 'mousedown', 'mousemove', 'mouseout', 'mouseover', 'mouseup', 'resize', 'scroll',
+    'DOMNodeInserted', 'DOMNodeRemoved', 'DOMNodeRemovedFromDocument', 'DOMNodeInsertedIntoDocument', 'DOMAttrModified', 'DOMCharacterDataModified', 'DOMElementNameChanged', 'DOMAttributeNameChanged', 'DOMActivate', 'DOMFocusIn', 'DOMFocusOut', 'online', 'offline', 'textInput',
+    'abort', 'close', 'dragdrop', 'load', 'paint', 'reset', 'select', 'submit', 'unload'
+];
+
+function stopPropagation (e) {
+    e.stopPropagation();
+    // e.preventDefault(); // Stop for the form controls, etc., too?
+}
+for (i=0; i < handlers.length; i++) {
+    window.addEventListener(handlers[i], function (e) {stopPropagation(e);}, true);
+}
+
+if (window.stop) {
+    window.stop();
+}
+
+throw '';
+}
+
+
+}

@@ -154,10 +154,6 @@ function scheduleA() {
         document.getElementById("demo3-a").innerHTML = dayweek;
         document.getElementById("demo4-a").innerHTML = bmessage;
 
-        ////////////////
-        //var timel = "15:20:00";
-        ////////////////
-
         var today = new Date();
         var dd = String(today.getDate()).padStart(2, '0');
         var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!

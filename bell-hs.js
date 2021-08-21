@@ -584,12 +584,14 @@ function getsch() {
         dayweek = "Saturday!"
         period = "Please enjoy your weekend!"
         bmessage = "Enjoy Your Weekend!"
+        var timel = "24:00:00";
     };
 
     if (n == 0) {
         dayweek = "Sunday :|"
         period = "Just one more day please......."
         bmessage = "Enjoy Your Weekend!"
+        var timel = "24:00:00";
     }
 
 

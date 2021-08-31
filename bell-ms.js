@@ -35,6 +35,7 @@ function getsch() {
         //var timex = new Date().getHours();
         if (timex >= 1.00 && timex < 8.00) {
             period = "Good Morning! School Starts in..."
+            bmessage = "Early Bird Until 8:00"
             var timel = "8:00:00";
             classis = false;
         } else if (timex >= 8.00 && timex < 8.40) {
@@ -157,6 +158,7 @@ function getsch() {
         //var timex = new Date().getHours();
         if (timex >= 1.00 && timex < 8.00) {
             period = "Good Morning! School Starts in..."
+            bmessage = "Early Bird Until 8:00"
             var timel = "8:00:00";
             classis = false;
         } else if (timex >= 8.00 && timex < 9.30) {
@@ -247,6 +249,7 @@ function getsch() {
         //var timex = new Date().getHours();
         if (timex >= 1.00 && timex < 8.00) {
             period = "Good Morning! School Starts in..."
+            bmessage = "Early Bird Until 8:00"
             var timel = "8:00:00";
             classis = false;
         } else if (timex >= 8.00 && timex <= 9.30) {
@@ -339,6 +342,7 @@ function getsch() {
         //var timex = new Date().getHours();
         if (timex >= 1.00 && timex < 8.00) {
             period = "Good Morning! School Starts in..."
+            bmessage = "Early Bird Until 8:00"
             var timel = "8:00:00";
             classis = false;
         } else if (timex >= 8.00 && timex < 8.40) {
@@ -466,6 +470,7 @@ function getsch() {
         dayweek = "Friday :)"
         //var timex = new Date().getHours();
         if (timex >= 1.00 && timex < 8.00) {
+            bmessage = "Early Bird Until 8:00"
             period = "Good Morning! School Starts in..."
             var timel = "8:00:00";
             classis = false;

@@ -6,7 +6,7 @@ function scheduleB() {
     var n = d.getDay()
     getsch();
 
-    n = 00;
+    n = 9;
 
 
 //set the target countdown time
@@ -31,7 +31,7 @@ function getsch() {
     var timex = chour + "." + cminute;
 
 
-        if (n == 00) {
+        if (n == 9) {
             dayweek = "Wednesday (No Block)"
             //var timex = new Date().getHours();
             if (timex >= 1.00 && timex < 8.00) {

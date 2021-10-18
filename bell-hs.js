@@ -3,8 +3,7 @@ function scheduleA() {
     audio = new Audio('./img/guitarbell.mp3');
 
     var d = new Date();
-    //var n = d.getDay()
-    var n = 1;
+    var n = d.getDay();
     getsch();
 
 

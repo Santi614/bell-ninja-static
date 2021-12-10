@@ -452,7 +452,7 @@ function getsch() {
 
 
     ///// Friday
-    if (n == 3) {
+    if (n == 5) {
         dayweek = "Wednesday (special odd)"
         //var timex = new Date().getHours();
         if (timex >= 1.00 && timex < 8.00) {

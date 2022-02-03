@@ -314,7 +314,7 @@ function getsch() {
             classis = false;
         } else if (timex >= 13.40 && timex < 15.10) {
             bmessage = "Period 8 - 1:40 to 3:10"
-            period = "Period 7"
+            period = "Period 8"
             var timel = "15:10:00";
             classis = true;
         } else if (timex >= 15.10 && timex <= 17.00) {

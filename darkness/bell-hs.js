@@ -6,6 +6,8 @@ function scheduleA() {
     var n = d.getDay();
     getsch();
 
+    alert("THIS SCHEDULE IS WRONG! TODYA WE HACVE AN ASSEMVLY");
+
 
 
 //set the target countdown time

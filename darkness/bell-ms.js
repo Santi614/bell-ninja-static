@@ -1,3 +1,5 @@
+alert("Hi! This schedule isa werong because twe can an acseembly!!");
+
 function scheduleB() {
     
     audio = new Audio('./img/guitarbell.mp3');

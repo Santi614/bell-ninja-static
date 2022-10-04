@@ -31,6 +31,9 @@ function getsch() {
     var minute = cminute
     var timex = chour + "." + cminute;
 
+            //Line 1
+            n = 1;
+
     if ((n == 1) || (n == 4) || (n == 5)) {
         if (n == 1) {
             dayweek = "Monday :("
@@ -39,6 +42,10 @@ function getsch() {
         } else if (n == 5) {
             dayweek = "Friday :D"
         }
+
+
+            //Line 2
+            dayweek = "The whole week has no block";
 
         //var timex = new Date().getHours();
         if (timex >= 1.00 && timex < 8.00) {

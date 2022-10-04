@@ -42,6 +42,8 @@ function scheduleA() {
             } else if (n == 5) {
                 dayweek = "Friday :D"
             }
+
+            //Line 2
             dayweek = "The whole week has no block";
 
             //var timex = new Date().getHours();

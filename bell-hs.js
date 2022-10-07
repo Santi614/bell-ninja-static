@@ -290,6 +290,7 @@ function scheduleA() {
         };
 
         if (n == 5) {
+            dayweek = "Friday";
             //var timex = new Date().getHours();
             if (timex >= 1.00 && timex < 8.00) {
                 period = "Good Morning! School Starts in..."

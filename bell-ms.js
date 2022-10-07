@@ -36,8 +36,6 @@ function getsch() {
             dayweek = "Monday :("
         } else if (n == 4) {
             dayweek = "Thursday"
-        } else if (n == 5) {
-            dayweek = "Friday :D"
         }
 
         //var timex = new Date().getHours();
@@ -290,6 +288,117 @@ function getsch() {
             classis = false;
         }
     };
+
+    if (n == 1) {
+        dayweek = "Monday :("
+    } else if (n == 4) {
+        dayweek = "Thursday"
+    }
+
+    if(n == 5) {
+    //var timex = new Date().getHours();
+    if (timex >= 1.00 && timex < 8.00) {
+        period = "Good Morning! School Starts in..."
+        bmessage = "Early Bird Until 8:00"
+        var timel = "8:00:00";
+        classis = false;
+    } else if (timex >= 8.00 && timex < 8.43) {
+        period = "Period 1"
+        bmessage = "Period 1 - 8:00 to 8:43"
+        var timel = "8:43:00";
+        classis = true;
+    } else if (timex >= 8.43 && timex < 8.48) {
+        bmessage = "Period 1 & 2 Intermission - 8:43 to 8:48"
+        period = "Class Intermission"
+        var timel = "8:48:00";
+        classis = false;
+    } else if (timex >= 8.48 && timex < 9.31) {
+        period = "Period 2"
+        bmessage = "Period 2 - 8:48 to 9:31"
+        var timel = "9:31:00";
+        classis = true;
+    } else if (timex >= 9.31 && timex < 10.12) {
+        bmessage = "Break - 9:31 to 10:12"
+        period = "Assembly"
+        var timel = "10:12:00";
+        classis = false;
+    } else if (timex >= 10.12 && timex < 10.55) {
+        period = "Period 3"
+        bmessage = "Period 3 - 10:12 to 10:55"
+        var timel = "10:55:00";
+        classis = true;
+    } else if (timex >= 10.55 && timex < 11.00) {
+        bmessage = "Period 3 & 4 Intermission - 10:55 to 11:00"
+        period = "Class Intermission"
+        var timel = "11:00:00";
+        classis = false;
+    } else if (timex >= 11.00 && timex < 11.43) {
+        period = "Period 4"
+        bmessage = "Period 4 - 11:00 to 11:43"
+        var timel = "11:43:00";
+        classis = true;
+    } else if (timex >= 11.43 && timex < 11.48) {
+        bmessage = "Period 4 & 5 Intermission - 11:43 to 11:48"
+        period = "Class Intermission"
+        var timel = "11:48:00";
+        classis = false;
+    } else if (timex >= 11.48 && timex < 12.31) {
+        bmessage = "Period 5 - 11:48 to 12:31"
+        period = "Period 5a"
+        var timel = "12:31:00";
+        classis = true;
+    } else if (timex >= 12.31 && timex < 12.36) {
+        bmessage = "Period 5 & 6 Intermission - 12:31 to 12:36"
+        period = "Class Intermission"
+        var timel = "12:36:00";
+        classis = false;
+    } else if (timex >= 12.36 && timex < 13.19) {
+        bmessage = "Period 6 - 12:36 to 1:19"
+        period = "Period 6"
+        var timel = "13:19:00";
+        classis = true;
+    } else if (timex >= 13.19 && timex < 13.24) {
+        bmessage = "Period 6 & 7 Intermission - 1:19 to 1:24"
+        period = "Class Intermission"
+        var timel = "13:24:00";
+        classis = false;
+    } else if (timex >= 13.24 && timex < 14.07) {
+        bmessage = "Period 7 - 1:24 to 2:07"
+        period = "Period 7"
+        var timel = "14:07:00";
+        classis = false;
+    } else if (timex >= 14.07 && timex < 14.12) {
+        bmessage = "Period 7 & 8 Intermission - 2:07 to 2:12"
+        period = "Class Intermission"
+        var timel = "14:12:00";
+        classis = false;
+    } else if (timex >= 14.12 && timex < 14.55) {
+        bmessage = "Period 8 - 2:12 to 2:55"
+        period = "Period 8"
+        var timel = "14:55:00";
+        classis = false;
+    } else if (timex >= 14.55 && timex < 15.15) {
+        bmessage = "Tutorial - 2:55 to 3:15"
+        period = "Tutorial"
+        var timel = "15:15:00";
+        classis = false;
+    } else if (timex >= 15.15 && timex <= 17.00) {
+        bmessage = "The library *MAY BE* open until 5:00 PM"
+        period = "Have a great rest of your day! Library Closes in..."
+        var timel = "17:00:00";
+        classis = false;
+    } else if (timex >= 17.01 && timex <= 24.59) {
+        period = "Have a great rest of your day!"
+        var timel = "24:00:00";
+        classis = false;
+    } else {
+        period = "Get to class!"
+        var timel = "1:00:00";
+        classis = false;
+    }
+};
+
+    
 
     if (n == 6) {
         dayweek = "Saturday!"

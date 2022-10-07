@@ -31,7 +31,7 @@ function scheduleB() {
         var minute = cminute
         var timex = chour + "." + cminute;
 
-        if ((n == 1) || (n == 4) || (n == 5)) {
+        if ((n == 1) || (n == 4)) {
             if (n == 1) {
                 dayweek = "Monday :("
             } else if (n == 4) {
@@ -293,10 +293,11 @@ function scheduleB() {
             dayweek = "Monday :("
         } else if (n == 4) {
             dayweek = "Thursday"
+        } else if (n == 5) {
+            dayweek = "Friday";
         }
 
-        if (n == 5) {
-            dayweek = "Friday";
+        if(n == 5) {
             //var timex = new Date().getHours();
             if (timex >= 1.00 && timex < 8.00) {
                 period = "Good Morning! School Starts in..."

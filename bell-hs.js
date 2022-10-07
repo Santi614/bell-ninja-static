@@ -31,7 +31,7 @@ function scheduleA() {
         var minute = cminute
         var timex = chour + "." + cminute;
 
-        if ((n == 1) || (n == 4) || (n == 5)) {
+        if ((n == 1) || (n == 4)) {
             if (n == 1) {
                 dayweek = "Monday :("
             } else if (n == 4) {

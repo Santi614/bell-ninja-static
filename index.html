@@ -66,8 +66,32 @@
                     <h2>Class Schedule (HS) <p id="demo-a"></p>
                     </h2>
 
-                    <p>Here is a quick preview. Please be sure that you've selected the correct schedule. If you found a
-                        mistake in the schedule, please use the contact form to report the error. Thank you.</p>
+                    <style>
+                        /* Create two equal columns that floats next to each other */
+                        .column {
+                            float: left;
+                            width: 50%;
+                        }
+
+                        /* Clear floats after the columns */
+                        .row:after {
+                            content: "";
+                            display: table;
+                            clear: both;
+                        }
+                    </style>
+
+                    <div class="row">
+                        <p class='column'>Here is a quick preview. Please be sure that you've selected the correct
+                            schedule. If you found a
+                            mistake in the schedule, please use the contact form to report the error. Thank you.</p>
+
+                        <div class='column'>
+                            <img src="img/panicstudy.png" style="position: absolute;" alt="Panic Study"
+                                style="height: 500px; width: auto; border-radius: 15px;">
+                        </div>
+                    </div>
+
                     <br>
                     WARNING! The website will play a digital "bell" noise. If you do not want this, please mute the page
                     tab!
@@ -123,6 +147,7 @@
                     </div>
                     <br>
                     <br>
+
 
 
 
@@ -373,7 +398,8 @@
                         <li data-panel="panel-1">
                             <a href="#">
                                 <div style='position: relative; margin-left: 38.5%;'><i
-                                        class="fas fa-envelope fa-5x"></i></div>
+                                        class="fas fa-envelope fa-5x"></i>
+                                </div>
                                 <br>
                                 <b style='position: relative; margin-left: 31%;'>C O N T A C T</b>
                             </a>
@@ -401,7 +427,8 @@
                         <li data-panel="panel-4">
                             <a href="#">
                                 <div style='position: relative; margin-left: 40.5%;'><i
-                                        class="fas fa-spinner fa-5x"></i></div>
+                                        class="fas fa-spinner fa-5x"></i>
+                                </div>
                                 <br>
                                 <b style='position: relative; margin-left: 25.5%;'>N O T <span
                                         style='visibility: hidden'>f</span> L O A D I N G</b>

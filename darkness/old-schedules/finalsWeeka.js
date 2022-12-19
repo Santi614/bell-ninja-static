@@ -36,51 +36,51 @@ function scheduleA() {
         //var timex = new Date().getHours();
         if (timex >= 1.00 && timex < 8.00) {
             period = "Early Bird"
-            var timel = "8:00:00";
+            timel = "8:00:00";
             classis = false;
         } else if (timex >= 8.00 && timex < 9.10) {
             period = "Class 1"
             bmessage = "Session 1 - 8:00 to 9:10"
-            var timel = "9:10:00";
+            timel = "9:10:00";
             classis = true;
         } else if (timex >= 9.10 && timex < 9.20) {
             period = "Take 10. We're back at 9:20"
             bmessage = "Intermission Between 2 Classes -  9:10 to 9:20"
-            var timel = "9:20:00";
+            timel = "9:20:00";
             classis = false;
         } else if (timex >= 9.20 && timex < 10.25) {
             period = "Class 2"
             bmessage = "Session 2 - 9:20 to 10:25"
-            var timel = "10:25:00";
+            timel = "10:25:00";
             classis = false;
         } else if (timex >= 10.25 && timex < 10.35) {
             period = "Take 10. We're back at 10:35"
             bmessage = "Intermission Between 2 Classes - 10:25 to 10:35"
-            var timel = "10:35:00";
+            timel = "10:35:00";
             classis = true;
         } else if (timex >= 10.35 && timex < 11.45) {
             period = "Class 3"
             bmessage = "Session 3 - 10:35 to 11:45"
-            var timel = "11:45:00";
+            timel = "11:45:00";
             classis = false;
         } else if (timex >= 11.45 && timex < 11.55) {
             period = "Take 10. We're back at 11:55"
             bmessage = "Intermission Between 2 Classes - 11:45 to 11:55"
-            var timel = "11:55:00";
+            timel = "11:55:00";
             classis = true;
         } else if (timex >= 11.55 && timex < 13.00) {
             period = "Class 4"
             bmessage = "Session 4 - 11:55 to 1:00"
-            var timel = "13:00:00";
+            timel = "13:00:00";
             classis = false;
         } else if (timex >= 13.00 && timex <= 24.59) {
             period = "School Day Ended"
-            var timel = "23:59:59";
+            timel = "23:59:59";
             classis = false;
             bmessage = "Have a great rest of your day!"
         } else {
             period = "Intermission"
-            var timel = "1:00:00";
+            timel = "1:00:00";
             classis = false;
             exit("Program Terminated to prevent the bell 'sound loop' bug.");
         }
@@ -93,31 +93,31 @@ function scheduleA() {
         //var timex = new Date().getHours();
         if (timex >= 1.00 && timex < 8.00) {
             period = "Early Bird"
-            var timel = "8:00:00";
+            timel = "8:00:00";
             classis = false;
         } else if (timex >= 8.00 && timex < 9.30) {
             period = "Class 1"
             bmessage = "Class 1 TESTING -  8:00 to 9:30"
-            var timel = "9:30:00";
+            timel = "9:30:00";
             classis = true;
         } else if (timex >= 9.30 && timex < 9.40) {
             period = "Take 10. We're back at 9:40"
             bmessage = "Intermission Between 2 Classes -  9:30 to 9:40"
-            var timel = "9:40:00";
+            timel = "9:40:00";
             classis = false;
         } else if (timex >= 9.40 && timex < 11.10) {
             period = "Class 2"
             bmessage = "Class 2 TESTING -  9:40 to 11:10"
-            var timel = "11:10:00";
+            timel = "11:10:00";
             classis = false;
         } else if (timex >= 11.10 && timex <= 24.59) {
             period = "School Day Ended"
-            var timel = "23:59:59";
+            timel = "23:59:59";
             classis = false;
             bmessage = "Have a great rest of your day!"
         } else {
             period = "Intermission"
-            var timel = "1:00:00";
+            timel = "1:00:00";
             classis = false;
             exit("Program Terminated to prevent the bell 'sound loop' bug.");
         }
@@ -132,7 +132,7 @@ function scheduleA() {
         document.getElementById("demo4-a").innerHTML = bmessage;
 
         ////////////////
-        //var timel = "15:20:00";
+        //timel = "15:20:00";
         ////////////////
 
         var today = new Date();

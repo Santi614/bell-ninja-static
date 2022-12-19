@@ -576,14 +576,6 @@ function scheduleA() {
         scheduleA();
     }, timeoutx);
 
-    /*
-    if (accepted()) {
-    
-        document.cookie = "audioenabled = True";
-    
-    }
-    */
-
 
 
     function exit(status) {

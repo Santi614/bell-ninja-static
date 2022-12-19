@@ -1,6 +1,5 @@
-//alert("Hi! This schedule isa werong because twe can an acseembly!!");
 
-function regularSchedule() {
+function regularSchedule(timex) {
     //var timex = new Date().getHours();
     if (timex >= 1.00 && timex < 8.00) {
         period = "Good Morning! School Starts in..."
@@ -103,7 +102,7 @@ function regularSchedule() {
     }
 };
 
-function EvenBlock() {
+function EvenBlock(timex) {
     if (timex >= 1.00 && timex < 8.00) {
         period = "Good Morning! School Starts in..."
         bmessage = "Early Bird Until 8:00"
@@ -170,7 +169,7 @@ function EvenBlock() {
     }
 };
 
-function OddBlock() {
+function OddBlock(timex) {
     if (timex >= 1.00 && timex < 8.00) {
         period = "Good Morning! School Starts in..."
         bmessage = "Early Bird Until 8:00"
@@ -243,7 +242,7 @@ function OddBlock() {
 }
 
 
-function AssemblySchedule() {
+function AssemblySchedule(timex) {
     if (timex >= 1.00 && timex < 8.00) {
         period = "Good Morning! School Starts in..."
         bmessage = "Early Bird Until 8:00"
@@ -372,24 +371,24 @@ function scheduleA() {
         //divide current minute by sixty (an hour)* and combine strings for hour + minute product*
         // new Date() and today are commensurated. ACtually, division is not necessary if the string (x.x) is accepted.
         var minute = cminute
-        var timex = chour + "." + cminute;
+        timex = chour + "." + cminute;
 
 
             if (n == 1) {
                 dayweek = "Monday :("
                 //regularSchedule();
-                OddBlock();
+                OddBlock(timex);
             } else if (n == 4) {
                 dayweek = "Thursday"
                 //regularSchedule();
-                EvenBlock();
+                EvenBlock(timex);
             }
 
             ///// Tuesday (Odd Block)
             if (n == 2) {
                 dayweek = "Tuesday"
                 //OddBlock();
-                EvenBlock();
+                EvenBlock(timex);
             };
 
             ///// Wednesday (Even Block)
@@ -397,16 +396,15 @@ function scheduleA() {
                 dayweek = "Wednesday"
                 //var timex = new Date().getHours();
                 //EvenBlock();
-                OddBlock();
+                OddBlock(timex);
             };
 
             if (n == 5) {
                 dayweek = "Friday";
                 //var timex = new Date().getHours();
                 //AssemblySchedule();
-                OddBlock();
+                OddBlock(timex);
             };
-
 
             if (n == 6) {
                 dayweek = "Saturday!"

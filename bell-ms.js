@@ -344,7 +344,7 @@ function AssemblySchedule(timex) {
     }
 }
 
-function scheduleA() {
+function scheduleB() {
 
     audio = new Audio('./img/guitarbell.mp3');
 

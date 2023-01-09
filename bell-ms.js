@@ -376,37 +376,32 @@ function scheduleB() {
 
         if (n == 1) {
             dayweek = "Monday :("
-            //regularSchedule();
-            OddBlock(timex);
+            regularSchedule();
         }
 
         ///// Tuesday (Odd Block)
         if (n == 2) {
             dayweek = "Tuesday"
-            //OddBlock();
-            EvenBlock(timex);
+            OddBlock();
         };
 
         ///// Wednesday (Even Block)
         if (n == 3) {
             dayweek = "Wednesday"
             //var timex = new Date().getHours();
-            //EvenBlock();
-            OddBlock(timex);
+            EvenBlock();
         };
 
         if (n == 4) {
             dayweek = "Thursday"
-            //regularSchedule();
-            EvenBlock(timex);
+            regularSchedule();
         }
 
 
         if (n == 5) {
             dayweek = "Friday";
             //var timex = new Date().getHours();
-            //AssemblySchedule();
-            OddBlock(timex);
+            AssemblySchedule();
         };
 
         if (n == 6) {

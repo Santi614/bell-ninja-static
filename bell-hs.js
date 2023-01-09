@@ -379,8 +379,7 @@ function scheduleA() {
 
         if (n == 1) {
             dayweek = "Monday :("
-            //regularSchedule();
-            OddBlock(timex);
+            regularSchedule();
         }
 
         ///// Tuesday (Odd Block)

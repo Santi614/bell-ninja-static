@@ -404,7 +404,8 @@ function scheduleA() {
         if (n == 5) {
             dayweek = "Friday";
             //var timex = new Date().getHours();
-            AssemblySchedule(timex);
+            //AssemblySchedule(timex);
+            regularSchedule(timex);
         };
 
 

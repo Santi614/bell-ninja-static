@@ -397,14 +397,16 @@ function scheduleA() {
 
         if (n == 4) {
             dayweek = "Thursday"
-            regularSchedule(timex);
+            //regularSchedule(timex);
+            AssemblySchedule(timex);
         }
 
 
         if (n == 5) {
             dayweek = "Friday";
             //var timex = new Date().getHours();
-            AssemblySchedule(timex);
+            //AssemblySchedule(timex);
+            regularSchedule(timex);
         };
 
 

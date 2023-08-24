@@ -348,6 +348,115 @@ function AssemblySchedule(timex) {
     }
 }
 
+function GradeMeetingSchedule(timex)
+{
+    if (timex >= 1.00 && timex < 8.00) {
+        period = "Good Morning! School Starts in..."
+        bmessage = "Early Bird Until 8:00"
+        timel = "8:00:00";
+        classis = false;
+    } else if (timex >= 8.00 && timex < 8.43) {
+        period = "Period 1"
+        bmessage = "Period 1 - 8:00 to 8:43"
+        timel = "8:43:00";
+        classis = true;
+    } else if (timex >= 8.43 && timex < 8.48) {
+        bmessage = "Period 1 & 2 Intermission - 8:43 to 8:48"
+        period = "Class Intermission"
+        timel = "8:48:00";
+        classis = false;
+    } else if (timex >= 8.48 && timex < 9.31) {
+        period = "Period 2"
+        bmessage = "Period 2 - 8:48 to 9:31"
+        timel = "9:31:00";
+        classis = true;
+    } else if (timex >= 9.31 && timex < 9.50) {
+        bmessage = "Class Meeting - 9:31 to 9:50, if your grade wasn't called stay in your second period"
+        period = "Assembly"
+        timel = "9:50:00";
+        classis = false;
+    } else if (timex >= 9.50 && timex < 10.12) {
+        period = "Break"
+        bmessage = "Break - 9:50 to 10:12"
+        timel = "10:12:00";
+        classis = true;
+    }
+    else if (timex >= 10.12 && timex < 10.55) {
+        period = "Period 3"
+        bmessage = "Period 3 - 10:12 to 10:55"
+        timel = "10:55:00";
+        classis = true;
+    } else if (timex >= 10.55 && timex < 11.00) {
+        bmessage = "Period 3 & 4 Intermission - 10:55 to 11:00"
+        period = "Class Intermission"
+        timel = "11:00:00";
+        classis = false;
+    } else if (timex >= 11.00 && timex < 11.43) {
+        period = "Period 4"
+        bmessage = "Period 4 - 11:00 to 11:43"
+        timel = "11:43:00";
+        classis = true;
+    } else if (timex >= 11.43 && timex < 11.48) {
+        bmessage = "Period 4 & 5 Intermission - 11:43 to 11:48"
+        period = "Class Intermission"
+        timel = "11:48:00";
+        classis = false;
+    } else if (timex >= 11.48 && timex < 12.31) {
+        bmessage = "Period 5 - 11:48 to 12:31"
+        period = "Period 5a"
+        timel = "12:31:00";
+        classis = true;
+    } else if (timex >= 12.31 && timex < 12.36) {
+        bmessage = "Period 5 & 6 Intermission - 12:31 to 12:36"
+        period = "Class Intermission"
+        timel = "12:36:00";
+        classis = false;
+    } else if (timex >= 12.36 && timex < 13.19) {
+        bmessage = "Period 6 - 12:36 to 1:19"
+        period = "Period 6"
+        timel = "13:19:00";
+        classis = true;
+    } else if (timex >= 13.19 && timex < 13.24) {
+        bmessage = "Period 6 & 7 Intermission - 1:19 to 1:24"
+        period = "Class Intermission"
+        timel = "13:24:00";
+        classis = false;
+    } else if (timex >= 13.24 && timex < 14.07) {
+        bmessage = "Period 7 - 1:24 to 2:07"
+        period = "Period 7"
+        timel = "14:07:00";
+        classis = false;
+    } else if (timex >= 14.07 && timex < 14.12) {
+        bmessage = "Period 7 & 8 Intermission - 2:07 to 2:12"
+        period = "Class Intermission"
+        timel = "14:12:00";
+        classis = false;
+    } else if (timex >= 14.12 && timex < 14.55) {
+        bmessage = "Period 8 - 2:12 to 2:55"
+        period = "Period 8"
+        timel = "14:55:00";
+        classis = false;
+    } else if (timex >= 14.55 && timex < 15.15) {
+        bmessage = "Tutorial - 2:55 to 3:15"
+        period = "Tutorial"
+        timel = "15:15:00";
+        classis = false;
+    } else if (timex >= 15.15 && timex <= 17.00) {
+        bmessage = "The library *MAY BE* open until 5:00 PM"
+        period = "Have a great rest of your day! Library Closes in..."
+        timel = "17:00:00";
+        classis = false;
+    } else if (timex >= 17.01 && timex <= 24.59) {
+        period = "Have a great rest of your day!"
+        timel = "24:00:00";
+        classis = false;
+    } else {
+        period = "Get to class!"
+        timel = "1:00:00";
+        classis = false;
+    }
+}
+
 function scheduleA() {
 
     audio = new Audio('./img/guitarbell.mp3');
@@ -377,7 +486,8 @@ function scheduleA() {
         timex = chour + "." + cminute;
 
 
-        if (n == 1) {
+
+        /*if (n == 1) {
             dayweek = "Monday :("
             regularSchedule(timex);
         }
@@ -420,8 +530,52 @@ function scheduleA() {
             period = "Just one more day please......."
             bmessage = "Enjoy Your Weekend!"
             timel = "24:00:00";
+        }*/
+        //change next week
+        if (n == 1) {
+            dayweek = "Monday :("
+            GradeMeetingSchedule(timex);
         }
 
+        ///// Tuesday (Odd Block)
+        if (n == 2) {
+            dayweek = "Tuesday"
+            GradeMeetingSchedule(timex);
+        };
+
+        ///// Wednesday (Even Block)
+        if (n == 3) {
+            dayweek = "Wednesday"
+            //var timex = new Date().getHours();
+            GradeMeetingSchedule(timex);
+        };
+
+        if (n == 4) {
+            dayweek = "Thursday"
+            GradeMeetingSchedule(timex);
+        }
+
+
+        if (n == 5) {
+            dayweek = "Friday";
+            //var timex = new Date().getHours();
+            GradeMeetingSchedule(timex);
+        };
+
+
+        if (n == 6) {
+            dayweek = "Saturday!"
+            period = "Please enjoy your weekend!"
+            bmessage = "Enjoy Your Weekend!"
+            timel = "24:00:00";
+        };
+
+        if (n == 0) {
+            dayweek = "Sunday :|"
+            period = "Just one more day please......."
+            bmessage = "Enjoy Your Weekend!"
+            timel = "24:00:00";
+        }
     }
 
 

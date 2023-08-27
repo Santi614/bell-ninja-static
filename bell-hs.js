@@ -572,7 +572,7 @@ function scheduleA() {
 
         if (n == 0) {
             dayweek = "Sunday :|"
-            period = "Just one more day please......."
+            period = "test: Just one more day please......."
             bmessage = "Enjoy Your Weekend!"
             timel = "24:00:00";
         }

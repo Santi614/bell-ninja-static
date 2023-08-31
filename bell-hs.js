@@ -357,51 +357,51 @@ function GradeMeetingSchedule(timex)
         classis = false;
     } else if (timex >= 8.00 && timex < 8.43) {
         period = "Period 1"
-        bmessage = "Period 1 - 8:00 to 8:43"
+        bmessage = "Period 1 - 8:00 to 8:40"
         timel = "8:43:00";
         classis = true;
-    } else if (timex >= 8.43 && timex < 8.48) {
-        bmessage = "Period 1 & 2 Intermission - 8:43 to 8:48"
+    } else if (timex >= 8.40 && timex < 8.45) {
+        bmessage = "Period 1 & 2 Intermission - 8:40 to 8:45"
         period = "Class Intermission"
         timel = "8:48:00";
         classis = false;
-    } else if (timex >= 8.48 && timex < 9.31) {
+    } else if (timex >= 8.45 && timex < 9.25) {
         period = "Period 2"
-        bmessage = "Period 2 - 8:48 to 9:31"
+        bmessage = "Period 2 - 8:45 to 9:25"
         timel = "9:31:00";
         classis = true;
-    } else if (timex >= 9.31 && timex < 9.50) {
-        bmessage = "Class Meeting - 9:31 to 9:50, if your grade wasn't called stay in your second period"
+    } else if (timex >= 9.25 && timex < 9.50) {
+        bmessage = "Class Meeting - 9:25 to 9:50, if your grade wasn't called stay in your second period"
         period = "Assembly"
         timel = "9:50:00";
         classis = false;
-    } else if (timex >= 9.50 && timex < 10.12) {
+    } else if (timex >= 9.50 && timex < 10.5) {
         period = "Break"
-        bmessage = "Break - 9:50 to 10:12"
+        bmessage = "Break - 9:50 to 10.05"
         timel = "10:12:00";
         classis = true;
     }
-    else if (timex >= 10.12 && timex < 10.55) {
+    else if (timex >= 10.05 && timex < 10.45) {
         period = "Period 3"
-        bmessage = "Period 3 - 10:12 to 10:55"
+        bmessage = "Period 3 - 10:05 to 10:45"
         timel = "10:55:00";
         classis = true;
-    } else if (timex >= 10.55 && timex < 11.00) {
-        bmessage = "Period 3 & 4 Intermission - 10:55 to 11:00"
+    } else if (timex >= 10.45 && timex < 10.50) {
+        bmessage = "Period 3 & 4 Intermission - 10:45 to 10:50"
         period = "Class Intermission"
         timel = "11:00:00";
         classis = false;
-    } else if (timex >= 11.00 && timex < 11.43) {
+    } else if (timex >= 10.50 && timex < 11.30) {
         period = "Period 4"
-        bmessage = "Period 4 - 11:00 to 11:43"
+        bmessage = "Period 4 - 10:50 to 11:30"
         timel = "11:43:00";
         classis = true;
-    } else if (timex >= 11.43 && timex < 11.48) {
-        bmessage = "Period 4 & 5 Intermission - 11:43 to 11:48"
+    } else if (timex >= 11.30 && timex < 11.35) {
+        bmessage = "Period 4 & 5 Intermission - 11:30 to 11:35"
         period = "Class Intermission"
         timel = "11:48:00";
         classis = false;
-    } else if (timex >= 11.48 && timex < 12.31) {
+    } else if (timex >= 11.35 && timex < 12.31) {
         bmessage = "Period 5 - 11:48 to 12:31"
         period = "Period 5a"
         timel = "12:31:00";
@@ -487,7 +487,7 @@ function scheduleA() {
 
 
 
-        /*if (n == 1) {
+        if (n == 1) {
             dayweek = "Monday :("
             regularSchedule(timex);
         }
@@ -515,51 +515,6 @@ function scheduleA() {
             dayweek = "Friday";
             //var timex = new Date().getHours();
             AssemblySchedule(timex);
-        };
-
-
-        if (n == 6) {
-            dayweek = "Saturday!"
-            period = "Please enjoy your weekend!"
-            bmessage = "Enjoy Your Weekend!"
-            timel = "24:00:00";
-        };
-
-        if (n == 0) {
-            dayweek = "Sunday :|"
-            period = "Just one more day please......."
-            bmessage = "Enjoy Your Weekend!"
-            timel = "24:00:00";
-        }*/
-        //change next week
-        if (n == 1) {
-            dayweek = "Monday :("
-            GradeMeetingSchedule(timex);
-        }
-
-        ///// Tuesday (Odd Block)
-        if (n == 2) {
-            dayweek = "Tuesday"
-            GradeMeetingSchedule(timex);
-        };
-
-        ///// Wednesday (Even Block)
-        if (n == 3) {
-            dayweek = "Wednesday"
-            //var timex = new Date().getHours();
-            GradeMeetingSchedule(timex);
-        };
-
-        if (n == 4) {
-            dayweek = "Thursday"
-            GradeMeetingSchedule(timex);
-        }
-
-
-        if (n == 5) {
-            dayweek = "Friday";
-            //var timex = new Date().getHours();
-            GradeMeetingSchedule(timex);
         };
 
 

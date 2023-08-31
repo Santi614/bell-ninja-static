@@ -485,7 +485,7 @@ function scheduleB() {
         timex = chour + "." + cminute;
 
 
-        /*if (n == 1) {
+        if (n == 1) {
             dayweek = "Monday :("
             regularSchedule(timex);
         }
@@ -527,52 +527,7 @@ function scheduleB() {
             period = "Just one more day please......."
             bmessage = "Enjoy Your Weekend!"
             timel = "24:00:00";
-        }*/
-        if (n == 1) {
-            dayweek = "Monday :("
-            GradeMeetingScheduleMiddleSchool(timex);
         }
-
-        ///// Tuesday (Odd Block)
-        if (n == 2) {
-            dayweek = "Tuesday"
-            GradeMeetingScheduleMiddleSchool(timex);
-        };
-
-        ///// Wednesday (Even Block)
-        if (n == 3) {
-            dayweek = "Wednesday"
-            //var timex = new Date().getHours();
-            GradeMeetingScheduleMiddleSchool(timex);
-        };
-
-        if (n == 4) {
-            dayweek = "Thursday"
-            GradeMeetingScheduleMiddleSchool(timex);
-        }
-
-
-        if (n == 5) {
-            dayweek = "Friday";
-            //var timex = new Date().getHours();
-            GradeMeetingScheduleMiddleSchool(timex);
-        };
-
-
-        if (n == 6) {
-            dayweek = "Saturday!"
-            period = "Please enjoy your weekend!"
-            bmessage = "Enjoy Your Weekend!"
-            timel = "24:00:00";
-        };
-
-        if (n == 0) {
-            dayweek = "Sunday :|"
-            period = "Just one more day please......."
-            bmessage = "Enjoy Your Weekend!"
-            timel = "24:00:00";
-        }
-
     }
 
 

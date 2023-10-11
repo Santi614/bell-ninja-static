@@ -593,7 +593,7 @@ function scheduleA() {
         if (n == 3) {
             dayweek = "Wednesday"
             //var timex = new Date().getHours();
-            EvenBlock(timex);
+            tentativePSATSchedule(timex);
         };
 
         if (n == 4) {

@@ -453,6 +453,96 @@ function GradeMeetingScheduleMiddleSchool(timex)
     }
 }
 
+function tentativePSATSchedule()
+{
+    if (timex >= 1.00 && timex < 8.00) {
+        period = "Good Morning! School Starts in..."
+        bmessage = "Early Bird Until 8:00"
+        timel = "8:00:00";
+        classis = false;
+    } else if (timex >= 8.00 && timex < 8.35) {
+        period = "Period 1"
+        bmessage = "Period 1 - 8:00 to 8:35"
+        timel = "8:35:00";
+        classis = true;
+    } else if (timex >= 8.35 && timex < 8.40) {
+        bmessage = "Period 1 & 2 Intermission - 8:35 to 8:40"
+        period = "Class Intermission"
+        timel = "8:40:00";
+        classis = false;
+    } else if (timex >= 8.40 && timex < 9.10) {
+        period = "Period 2"
+        bmessage = "Period 2 - 8:40 to 9:10"
+        timel = "9:10:00";
+        classis = true;
+    } else if (timex >= 9.10 && timex < 9.15) {
+        bmessage = "NO BREAK"
+        period = "Period 2 & 3 Intermission - 9:10 to 9:15"
+        timel = "9:15:00";
+        classis = false;
+    }
+    else if (timex >= 9.15 && timex < 9.45) {
+        period = "Period 3"
+        bmessage = "Period 3 - 9:15 to 9:45"
+        timel = "10:55:00";
+        classis = true;
+    } else if (timex >= 9.45 && timex < 9.50) {
+        bmessage = "Period 3 & 4 Intermission - 9:45 to 9:50"
+        period = "Class Intermission"
+        timel = "9:50:00";
+        classis = false;
+    } else if (timex >= 9.50 && timex < 10.20) {
+        period = "Period 4"
+        bmessage = "Period 4 - 9:50 to 10:20"
+        timel = "10:20:00";
+        classis = true;
+    } else if (timex >= 10.20 && timex < 10.25) {
+        bmessage = "Period 4 & 5 Intermission - 10:20 to 10:25"
+        period = "Class Intermission"
+        timel = "10:25:00";
+        classis = false;
+    } else if (timex >= 10.25 && timex < 10.55) {
+        bmessage = "Period 5 & 6 NO LUNCH - 10:25 to 10:55"
+        period = "Period 5 & 6"
+        timel = "10:55:00";
+        classis = true;
+    } else if (timex >= 10.55 && timex < 11.00) {
+        bmessage = "Period 5/6 & 7 Intermission - 10:55 to 11:00"
+        period = "Class Intermission"
+        timel = "11:00:00";
+        classis = false;
+    } else if (timex >= 11.00 && timex < 11.30) {
+        bmessage = "Period 7 - 11:00 to 11:30"
+        period = "Period 7"
+        timel = "11:30:00";
+        classis = false;
+    } else if (timex >= 11.30 && timex < 11.35) {
+        bmessage = "Period 7 & 8 Intermission - 11:30 to 11:35"
+        period = "Class Intermission"
+        timel = "11:35:00";
+        classis = false;
+    } else if (timex >= 11.35 && timex < 12.00) {
+        bmessage = "Period 8 - 11:35 to 12:00"
+        period = "Period 8"
+        timel = "12:00:00";
+        classis = false;
+    } else if (timex >= 12.00 && timex <= 17.00) {
+        bmessage = "The library *MAY BE* open until 5:00 PM"
+        period = "Have a great rest of your day! Library Closes in..."
+        timel = "17:00:00";
+        classis = false;
+    } else if (timex >= 17.01 && timex <= 24.59) {
+        period = "Have a great rest of your day!"
+        timel = "24:00:00";
+        classis = false;
+    } else {
+        period = "Get to class!"
+        timel = "1:00:00";
+        classis = false;
+    }
+    
+}
+
 
 
 function scheduleB() {
@@ -500,7 +590,7 @@ function scheduleB() {
         if (n == 3) {
             dayweek = "Wednesday"
             //var timex = new Date().getHours();
-            EvenBlock(timex);
+            tentativePSATSchedule(timex);
         };
 
         if (n == 4) {

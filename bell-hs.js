@@ -598,7 +598,7 @@ function scheduleA() {
 
         if (n == 4) {
             dayweek = "Thursday"
-            EvenBlock(timex);
+            regularSchedule(timex);
         }
 
 

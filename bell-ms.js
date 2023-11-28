@@ -583,16 +583,14 @@ function scheduleB() {
         ///// Tuesday (Odd Block)
         if (n == 2) {
             dayweek = "Tuesday"
-            regularSchedule(timex);
-            //OddBlock(timex);
+            OddBlock(timex);
         };
 
         ///// Wednesday (Even Block)
         if (n == 3) {
             dayweek = "Wednesday"
             //var timex = new Date().getHours();
-            regularSchedule(timex);
-            //EvenBlock(timex);
+            EvenBlock(timex);
         };
 
         if (n == 4) {

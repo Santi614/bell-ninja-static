@@ -457,6 +457,11 @@ function GradeMeetingSchedule(timex)
     }
 }
 
+function extendedAssemblySchedule(timex)
+{
+    
+}
+
 function tentativePSATSchedule()
 {
     if (timex >= 1.00 && timex < 8.00) {

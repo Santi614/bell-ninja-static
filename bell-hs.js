@@ -21,12 +21,12 @@ function regularSchedule(timex) {
         timel = "8:50:00";
         classis = false;
     } else if (timex >= 8.50 && timex < 9.35) {
-        period = "Period 2"
+        period = "Period 2, Class meeting"
         bmessage = "Period 2 - 8:50 to 9:35"
         timel = "9:35:00";
         classis = true;
     } else if (timex >= 9.35 && timex < 9.50) {
-        bmessage = "Break - 9:35 to 9:50"
+        bmessage = "Break if you are not in a class meeting - 9:35 to 9:50"
         period = "Break Time (15 min.)"
         timel = "9:50:00";
         classis = false;
@@ -111,7 +111,7 @@ function regularSchedule(timex) {
         timel = "24:00:00";
         classis = false;
     } else {
-        period = "Get to class!"
+        period = "Wow, devoted. Get to class!"
         timel = "1:00:00";
         classis = false;
     }
@@ -133,42 +133,52 @@ function EvenBlock(timex) {
         period = "Break Time (15 min.)"
         timel = "9:45:00";
         classis = false;
-    } else if (timex >= 9.45 && timex < 11.20) {
+    } else if (timex >= 9.45 && timex < 11.15) {
         period = "Period 4"
-        bmessage = "Period 4 - 9:45 to 11:20"
+        bmessage = "Period 4 - 9:45 to 11:15"
         timel = "11:20:00";
         classis = true;
-    } else if (timex >= 11.20 && timex < 11.25) {
-        bmessage = "Period 4 & 5 Intermission - 11:20 to 11:25"
+    } else if (timex >= 11.15 && timex < 11.20) {
+        bmessage = "Period 4 & 5 Intermission - 11:15 to 11:20"
         period = "Class Intermission"
-        timel = "11:25:00";
+        timel = "11:20:00";
         classis = false;
-    } else if (timex >= 11.25 && timex < 12.10) {
-        period = "Period 5"
-        bmessage = "Period 5 - 11:25 to 12:10"
+    } else if (timex >= 11.20 && timex < 11.45) {
+        period = "Period 5A"
+        bmessage = "Period 5a - 11:25 to 11:45"
+        timel = "11:45:00";
+        classis = true;
+    } else if (timex >= 11.45 && timex < 12.10) {
+        period = "Period 5B"
+        bmessage = "Period 5b - 11:45 to 12:10"
         timel = "12:10:00";
         classis = true;
-    } else if (timex >= 12.10 && timex < 12.15) {
+    } else if (timex >= 11.10 && timex < 12.15) {
         bmessage = "Period 5 & 6 Intermission - 12:10 to 12:15"
         period = "Class Intermission"
         timel = "12:15:00";
         classis = false;
-    } else if (timex >= 12.15 && timex < 13.00) {
-        bmessage = "Period 6 - 12:15 to 1:00"
-        period = "Period 6"
-        timel = "13:00:00";
+    } else if (timex >= 12.15 && timex < 12.40) {
+        bmessage = "Period 6A 9 and 10 Lunch - 12:15 to 1:00"
+        period = "Period 6a"
+        timel = "12:40:00";
         classis = true;
-    } else if (timex >= 13.00 && timex < 13.05) {
+    } else if (timex >= 12.40 && timex < 13.05) {
+        bmessage = "Period 6B 11 and 12 Lunch - 12:40 to 1:05"
+        period = "Period 6b"
+        timel = "13:05:00";
+        classis = true;
+    } else if (timex >= 13.05 && timex < 13.10) {
         bmessage = "Period 6 & 8 Intermission - 1:00 to 1:05"
         period = "Class Intermission"
         timel = "13:05:00";
         classis = false;
-    } else if (timex >= 13.05 && timex < 14.40) {
-        bmessage = "Period 8 - 1:05 to 2:40"
+    } else if (timex >= 13.10 && timex < 14.45) {
+        bmessage = "Period 8 - 1:10 to 2:45"
         period = "Period 8"
-        timel = "14:40:00";
+        timel = "14:45:00";
         classis = false;
-    } else if (timex >= 14.40 && timex <= 17.00) {
+    } else if (timex >= 14.45 && timex <= 17.00) {
         bmessage = "The library *MAY BE* open until 5:00 PM"
         period = "Have a great rest of your day! Library Closes in..."
         timel = "17:00:00";
@@ -178,7 +188,7 @@ function EvenBlock(timex) {
         timel = "24:00:00";
         classis = false;
     } else {
-        period = "Get to class!"
+        period = "Damn you're up late! Get to class!"
         timel = "1:00:00";
         classis = false;
     }
@@ -200,47 +210,57 @@ function OddBlock(timex) {
         period = "Break Time (15 min.)"
         timel = "9:45:00";
         classis = false;
-    } else if (timex >= 9.45 && timex < 11.20) {
+    } else if (timex >= 9.45 && timex < 11.15) {
         period = "Period 3"
-        bmessage = "Period 3 - 9:45 to 11:20"
+        bmessage = "Period 3 - 9:45 to 11:15"
+        timel = "11:15:00";
+        classis = true;
+    } else if (timex >= 11.15 && timex < 11.20) {
+        bmessage = "Period 3 & 5 Intermission - 11:15 to 11:20"
+        period = "Class Intermission"
         timel = "11:20:00";
-        classis = true;
-    } else if (timex >= 11.20 && timex < 11.25) {
-        bmessage = "Period 3 & 5 Intermission - 11:20 to 11:25"
-        period = "Class Intermission"
-        timel = "11:25:00";
         classis = false;
-    } else if (timex >= 11.25 && timex < 12.10) {
-        period = "Period 5"
-        bmessage = "Period 5 - 11:25 to 12:10"
-        timel = "12:10:00";
+    } else if (timex >= 11.20 && timex < 11.50) {
+        period = "Period 5A"
+        bmessage = "Period 5a - 11:20 to 11:50"
+        timel = "11:50:00";
         classis = true;
-    } else if (timex >= 12.10 && timex < 12.15) {
-        bmessage = "Period 5 & 6 Intermission - 12:10 to 12:15"
-        period = "Class Intermission"
-        timel = "12:15:00";
-        classis = false;
-    } else if (timex >= 12.15 && timex < 13.00) {
-        bmessage = "Period 6 - 12:15 to 1:00"
-        period = "Period 6"
-        timel = "13:00:00";
+    }  else if (timex >= 11.50 && timex < 12.20) {
+        period = "Period 5B"
+        bmessage = "Period 5b - 11:50 to 12:20"
+        timel = "12:20:00";
         classis = true;
-    } else if (timex >= 13.00 && timex < 13.05) {
-        bmessage = "Period 6 & 7 Intermission - 1:00 to 1:05"
+    } else if (timex >= 12.20 && timex < 12.25) {
+        bmessage = "Period 5 & 6 Intermission - 12:20 to 12:25"
         period = "Class Intermission"
-        timel = "13:05:00";
+        timel = "12:25:00";
         classis = false;
-    } else if (timex >= 13.05 && timex < 14.40) {
-        bmessage = "Period 7 - 1:05 to 2:40"
+    } else if (timex >= 12.25 && timex < 12.55) {
+        bmessage = "Period 6A 9 and 10 Lunch - 12:25 to 12:55"
+        period = "Period 6a"
+        timel = "12:55:00";
+        classis = true;
+    } else if (timex >= 12.55 && timex < 13.20) {
+        bmessage = "Period 6B 11 and 12 Lunch - 12:55 to 1:20"
+        period = "Period 6b"
+        timel = "13:20:00";
+        classis = true;
+    } else if (timex >= 13.20 && timex < 13.25) {
+        bmessage = "Period 6 & 7 Intermission - 1:20 to 1:25"
+        period = "Class Intermission"
+        timel = "13:25:00";
+        classis = false;
+    } else if (timex >= 13.25 && timex < 15.00) {
+        bmessage = "Period 7 - 1:25 to 3:00"
         period = "Period 7"
-        timel = "14:40:00";
+        timel = "15:00:00";
         classis = false;
-    } else if (timex >= 14.40 && timex < 15.15) {
-        bmessage = "Tutorial - 2:40 to 3:15"
-        period = "Tutorial"
-        timel = "15:15:00";
+    } else if (timex >= 15.00 && timex < 15.30) {
+        bmessage = "Optional Tutorial - 3:00 to 3:30"
+        period = "Optional Tutorial"
+        timel = "15:30:00";
         classis = false;
-    } else if (timex >= 15.15 && timex <= 17.00) {
+    } else if (timex >= 15.30 && timex <= 17.00) {
         bmessage = "The library *MAY BE* open until 5:00 PM"
         period = "Have a great rest of your day! Library Closes in..."
         timel = "17:00:00";
@@ -250,7 +270,7 @@ function OddBlock(timex) {
         timel = "24:00:00";
         classis = false;
     } else {
-        period = "Get to class!"
+        period = "Why are you on here right now? Get to class!"
         timel = "1:00:00";
         classis = false;
     }
@@ -602,14 +622,16 @@ function scheduleA() {
         ///// Tuesday (Odd Block)
         if (n == 2) {
             dayweek = "Tuesday"
-            OddBlock(timex);
+            //OddBlock(timex);
+            regularSchedule(timex)
         };
 
         ///// Wednesday (Even Block)
         if (n == 3) {
             dayweek = "Wednesday"
             //var timex = new Date().getHours();
-            EvenBlock(timex);
+            //EvenBlock(timex);
+            regularSchedule(timex);
         };
 
         if (n == 4) {

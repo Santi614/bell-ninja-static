@@ -656,6 +656,7 @@ function scheduleA() {
 
 
         if (n == 5) {
+            //alert("The schedule may not be accurate today as the school never tells me when there is an assembly")
             dayweek = "Friday";
             //var timex = new Date().getHours();
             AssemblySchedule(timex);

@@ -631,27 +631,25 @@ function scheduleA() {
 
         if (n == 1) {
             dayweek = "Monday :("
-            AssemblySchedule(timex);
+            regularSchedule(timex);
         }
 
         ///// Tuesday (Odd Block)
         if (n == 2) {
             dayweek = "Tuesday"
-            //OddBlock(timex);
-            AssemblySchedule(timex)
+            OddBlock(timex);
         };
 
         ///// Wednesday (Even Block)
         if (n == 3) {
             dayweek = "Wednesday"
             //var timex = new Date().getHours();
-            //EvenBlock(timex);
-            AssemblySchedule(timex);
+            EvenBlock(timex);
         };
 
         if (n == 4) {
             dayweek = "Thursday"
-            AssemblySchedule(timex);
+            regularSchedule(timex);
         }
 
 
@@ -659,7 +657,7 @@ function scheduleA() {
             //alert("The schedule may not be accurate today as the school never tells me when there is an assembly")
             dayweek = "Friday";
             //var timex = new Date().getHours();
-            AssemblySchedule(timex);
+            regularSchedule(timex);
         };
 
 

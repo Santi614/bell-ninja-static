@@ -16,12 +16,12 @@ function regularSchedule(timex) {
         timel = "8:50:00";
         classis = false;
     } else if (timex >= 8.50 && timex < 9.35) {
-        period = "Period 2, Class meeting"
+        period = "Period 2"
         bmessage = "Period 2 - 8:50 to 9:35"
         timel = "9:35:00";
         classis = true;
     } else if (timex >= 9.35 && timex < 9.50) {
-        bmessage = "Break if you are not in a class meeting - 9:35 to 9:50"
+        bmessage = "Break"
         period = "Break Time (15 min.)"
         timel = "9:50:00";
         classis = false;
@@ -621,20 +621,20 @@ function scheduleB() {
 
         if (n == 1) {
             dayweek = "Monday :("
-            AssemblySchedule(timex);
+            regularSchedule(timex);
         }
 
         ///// Tuesday (Odd Block)
         if (n == 2) {
             dayweek = "Tuesday"
-            AssemblySchedule(timex);
+            OddBlock(timex);
         };
 
         ///// Wednesday (Even Block)
         if (n == 3) {
             dayweek = "Wednesday"
             //var timex = new Date().getHours();
-            AssemblySchedule(timex);
+            EvenBlock(timex);
         };
 
         if (n == 4) {

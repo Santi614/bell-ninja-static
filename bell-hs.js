@@ -42,7 +42,7 @@ function regularSchedule(timex) {
         classis = false;
     } else if (timex >= 10.40 && timex < 11.25) {
         period = "Period 4"
-        bmessage = "Period 4 - 10:40 to 11:30"
+        bmessage = "Period 4 - 10:40 to 11:25"
         timel = "11:30:00";
         classis = true;
     }
@@ -69,17 +69,17 @@ function regularSchedule(timex) {
     } else if (timex >= 12.25 && timex < 12.50) {
         bmessage = "Period 6A 9 & 10 Lunch - 12:25 to 12:50"
         period = "Period 6a"
-        timel = "13:10:00";
+        timel = "12:50:00";
         classis = true;
     } else if (timex >= 12.50 && timex < 13.15) {
         bmessage = "Period 6B 11 & 12 Lunch - 12:50 to 13:15"
         period = "Period 6b"
         timel = "13:15:00";
         classis = true;
-    } else if (timex >= 13.10 && timex < 13.15) {
-        bmessage = "Period 6 & 7 Intermission - 1:10 to 1:15"
+    } else if (timex >= 13.15 && timex < 13.20) {
+        bmessage = "Period 6 & 7 Intermission - 1:15 to 1:20"
         period = "Class Intermission"
-        timel = "13:15:00";
+        timel = "13:20:00";
         classis = false;
     } else if (timex >= 13.20 && timex < 14.10) {
         bmessage = "Period 7 - 1:20 to 2:10"
@@ -136,7 +136,7 @@ function EvenBlock(timex) {
     } else if (timex >= 9.45 && timex < 11.15) {
         period = "Period 4"
         bmessage = "Period 4 - 9:45 to 11:15"
-        timel = "11:20:00";
+        timel = "11:15:00";
         classis = true;
     } else if (timex >= 11.15 && timex < 11.20) {
         bmessage = "Period 4 & 5 Intermission - 11:15 to 11:20"
@@ -145,7 +145,7 @@ function EvenBlock(timex) {
         classis = false;
     } else if (timex >= 11.20 && timex < 11.45) {
         period = "Period 5A"
-        bmessage = "Period 5a - 11:25 to 11:45"
+        bmessage = "Period 5a - 11:20 to 11:45"
         timel = "11:45:00";
         classis = true;
     } else if (timex >= 11.45 && timex < 12.10) {
@@ -153,13 +153,13 @@ function EvenBlock(timex) {
         bmessage = "Period 5b - 11:45 to 12:10"
         timel = "12:10:00";
         classis = true;
-    } else if (timex >= 11.10 && timex < 12.15) {
+    } else if (timex >= 12.10 && timex < 12.15) {
         bmessage = "Period 5 & 6 Intermission - 12:10 to 12:15"
         period = "Class Intermission"
         timel = "12:15:00";
         classis = false;
     } else if (timex >= 12.15 && timex < 12.40) {
-        bmessage = "Period 6A 9 and 10 Lunch - 12:15 to 1:00"
+        bmessage = "Period 6A 9 and 10 Lunch - 12:15 to 2:40"
         period = "Period 6a"
         timel = "12:40:00";
         classis = true;
@@ -169,9 +169,9 @@ function EvenBlock(timex) {
         timel = "13:05:00";
         classis = true;
     } else if (timex >= 13.05 && timex < 13.10) {
-        bmessage = "Period 6 & 8 Intermission - 1:00 to 1:05"
+        bmessage = "Period 6 & 8 Intermission - 1:05 to 1:1-"
         period = "Class Intermission"
-        timel = "13:05:00";
+        timel = "13:10:00";
         classis = false;
     } else if (timex >= 13.10 && timex < 14.45) {
         bmessage = "Period 8 - 1:10 to 2:45"

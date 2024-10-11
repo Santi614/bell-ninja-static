@@ -657,7 +657,8 @@ function scheduleA() {
             //alert("The schedule may not be accurate today as the school never tells me when there is an assembly")
             dayweek = "Friday";
             //var timex = new Date().getHours();
-            regularSchedule(timex);
+            //regularSchedule(timex);
+            EvenBlock(timex);
         };
 
 

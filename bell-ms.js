@@ -648,6 +648,7 @@ function scheduleB() {
             dayweek = "Friday";
             //var timex = new Date().getHours();
             AssemblySchedule(timex);
+            EvenBlock(timex)
         };
 
         if (n == 6) {

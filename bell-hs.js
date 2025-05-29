@@ -632,7 +632,7 @@ function scheduleA() {
         if (n == 1) {
             dayweek = "Monday :("
             regularSchedule(timex);
-        }
+        };
 
         ///// Tuesday (Odd Block)
         if (n == 2) {
@@ -658,7 +658,7 @@ function scheduleA() {
             dayweek = "Friday";
             //var timex = new Date().getHours();
             //regularSchedule(timex);
-            EvenBlock(timex);
+            AssemblySchedule(timex);
         };
 
 

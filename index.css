@@ -195,7 +195,7 @@ a:hover {
 .bl-main > section .bl-icon-close {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 10px;
     cursor: pointer;
     z-index: 100;
     opacity: 0;

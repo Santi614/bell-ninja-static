@@ -664,7 +664,7 @@ function scheduleB() {
             timel = "24:00:00";
         }
     }
-
+    
 
     document.getElementById("demo-b").innerHTML = period;
     document.getElementById("demo2-b").innerHTML = timex;

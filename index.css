@@ -66,7 +66,7 @@ a:hover {
 
 .bl-main {
     position: absolute;
-    width: 100%;
+    width: 125%;
     height: 100%;
     overflow: hidden;
 }
@@ -113,11 +113,7 @@ a:hover {
     background: #10A296;
 }
 
-.bl-main > section:nth-child(7) {
-    top: 0%;
-    left: 120%;
-    background: #10A296;
-}
+
 
 
 .bl-box {
@@ -438,6 +434,7 @@ div.bl-panel-items > div.bl-hide-current-work {
     -webkit-transition: opacity 0.2s linear 0.5s;
     -moz-transition: opacity 0.2s linear 0.5s;
     transition: opacity 0.2s linear 0.5s;
+    font-size: 150%;
 }
 
 section.bl-expand .bl-box {

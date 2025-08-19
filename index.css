@@ -468,6 +468,7 @@ section.bl-expand .bl-content,
 section.bl-expand .bl-icon-close {
     pointer-events: auto;
     opacity: 1;
+    overflow-wrap:anywhere;
     -webkit-transition: opacity 0.3s linear 0.5s;
     -moz-transition: opacity 0.3s linear 0.5s;
     transition: opacity 0.3s linear 0.5s;

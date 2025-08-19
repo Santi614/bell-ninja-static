@@ -22,7 +22,7 @@ function regularSchedule(timex) {
         classis = true;
     } else if (timex >= 9.35 && timex < 9.50) {
         bmessage = "Break"
-        period = "Break Time (15 min.)"
+        period = "Break Time (20 min.)"
         timel = "9:50:00";
         classis = false;
     } else if (timex >= 9.50 && timex < 10.35) {

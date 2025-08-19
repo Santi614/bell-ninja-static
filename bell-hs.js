@@ -42,8 +42,8 @@ function regularSchedule(timex) {
         classis = false;
     } else if (timex >= 10.58 && timex < 11.44) {
         period = "Period 4/ Lunch 1 - 10:58 - 11:44"
-        bmessage = "Period 4 - 10:40 to 11:25"
-        timel = "11:25:00";
+        bmessage = "Period 4 - 10:40 to 11:44"
+        timel = "11:44:00";
         classis = true;
     }
       else if (timex >= 11.44 && timex < 11.47) {

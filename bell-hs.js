@@ -120,9 +120,9 @@ function wednesdayfridaySchedule(timex) {
         timel = "8:45:00";
         classis = true;
     } else if (timex >= 8.45 && timex < 8.48) {
-        bmessage = "Period 1 & 2 Intermission - 8:57 to 9:00"
+        bmessage = "Period 1 & 2 Intermission - 8:45 to 8:48"
         period = "Class Intermission"
-        timel = "9:00:00";
+        timel = "8:48:00";
         classis = false;
     } else if (timex >= 8.48 && timex < 9.33) {
         period = "Period 2"
@@ -137,7 +137,7 @@ function wednesdayfridaySchedule(timex) {
     } else if (timex >= 10.15 && timex < 11.00) {
         period = "Period 3"
         bmessage = "Period 3 - 10.15 to 11:00"
-        timel = "10:35:00";
+        timel = "11:00:00";
         classis = true;
     } else if (timex >= 11.00 && timex < 11.03) {
         bmessage = "Period 3 & 4 Intermission - 11:00 to 11:03"
@@ -247,13 +247,13 @@ function scheduleA() {
             regularSchedule(timex);
         };
 
-        ///// Tuesday (Odd Block)
+        ///// Tuesday
         if (n == 2) {
             dayweek = "Tuesday"
             regularSchedule(timex);
         };
 
-        ///// Wednesday (Even Block)
+        ///// Wednesday
         if (n == 3) {
             dayweek = "Wednesday"
             //var timex = new Date().getHours();

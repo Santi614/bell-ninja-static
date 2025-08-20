@@ -117,7 +117,7 @@ function wednesdayfridaySchedule(timex) {
     } else if (timex >= 8.00 && timex < 8.45) {
         period = "Period 1"
         bmessage = "Period 1 - 8:00 to 8:45"
-        timel = "8:57:00";
+        timel = "8:45:00";
         classis = true;
     } else if (timex >= 8.45 && timex < 8.48) {
         bmessage = "Period 1 & 2 Intermission - 8:57 to 9:00"

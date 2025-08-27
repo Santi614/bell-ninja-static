@@ -84,7 +84,7 @@ function regularSchedule(timex) {
     } else if (timex >= 14.14 && timex < 15.00) {
         bmessage = "Period 8 - 2:14 to 3:00"
         period = "Period 8"
-        timel = "14:15:00";
+        timel = "15:00:00";
         classis = true;
     } else if (timex >= 15.00 && timex < 15.30) {
         bmessage = "Optional Tutorial - 3:00 to 3:30"

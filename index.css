@@ -193,20 +193,19 @@ a:hover {
 }
 
 .bl-main > section .bl-icon-close {
-    position: absolute;
-    top: 20px;
-    right: 10px;
+    position: fixed;
+    top: 70px;
+    right: 170px;
     cursor: pointer;
-    z-index: 100;
+    z-index: 9999;
     opacity: 0;
     pointer-events: none;
+    font-size: 96px;
+    color: white;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-
-/*
-.bl-icon-close:before {
-    content: "\e005";
-}
-*/
 
 .bl-content, 
 div.bl-panel-items > div > div {
@@ -464,8 +463,8 @@ section.bl-expand .bl-box {
     transition: opacity 0.1s linear 0s;
 }
 
-section.bl-expand .bl-content,
-section.bl-expand .bl-icon-close {
+.bl-main > section.bl-expand .bl-content,
+.bl-main > section.bl-expand .bl-icon-close {
     pointer-events: auto;
     opacity: 1;
     overflow-wrap:anywhere;
